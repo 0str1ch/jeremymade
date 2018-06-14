@@ -1,0 +1,16 @@
+body {
+  margin: 0px; }
+
+.page {
+  min-height: 100vh;
+  width: 100%; }
+
+/**
+SWUP Config
+**/
+.a-fade {
+  transition: .4s;
+  opacity: 1; }
+
+html.is-animating .a-fade {
+  opacity: 0; }

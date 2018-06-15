@@ -116,6 +116,9 @@ p {
   line-height: 1.5;
   margin-bottom: 1.15em; }
 
+p.large {
+  font-size: 1.6em; }
+
 @media only screen and (max-width: 641px) {
   p {
     font-size: 1.6em; } }

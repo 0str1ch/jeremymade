@@ -1,3 +1,263 @@
+/*
+* === SVG Icons ===
+*/
+
+.ui-Icon {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  position: relative;
+  top: -1px;
+  max-width: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.ui-Icon-Large {
+  width: 2em;
+  height: 2em;
+}
+
+/*
+* === Profile Card ===
+*/
+
+.profile img {
+  border-radius: 50%;
+  width: 10em;
+  height: auto;
+}
+
+/*
+* === Typography & Font Config ===
+*/
+
+* {
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
+  -ms-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "alt" 1;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+}
+
+h1:last-child,
+h1:only-child,
+h2:last-child,
+h2:only-child,
+h4:last-child,
+h4:only-child,
+h6:last-child,
+h6:only-child,
+p:last-child,
+p:only-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: NeueHaasDisplayBold, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
 h1 {
-    color: purple;
+  font-size: 5.25em;
+  margin-bottom: 0.05em;
+}
+
+@media only screen and (max-width: 641px) {
+  h1 {
+    line-height: 0.9;
+    font-size: 5em;
+  }
+}
+
+h2 {
+  font-size: 2.9em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+h2:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 641px) {
+  h2 {
+    font-size: 2.1em;
+  }
+}
+
+h3,
+h4 {
+  font-family: AndaleMono, monospace;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 0.8em;
+  display: inline-block;
+  line-height: 0.9;
+  font-weight: 700;
+  background: #000;
+  padding: 1.1em 1em 0.9em 1.45em;
+  color: #fff;
+  margin-bottom: 2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h4 {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 641px) {
+  h2 {
+    font-size: 2.1em;
+  }
+}
+
+p {
+  font-family: NeueHaas, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #000;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1.15em;
+}
+
+@media only screen and (max-width: 641px) {
+  p {
+    font-size: 1.6em;
+  }
+}
+
+p a, p strong {
+  font-family: NeueHaasBold, Helvetica, sans-serif;
+}
+
+p em {
+  font-family: NeueHaasItalic, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+/*
+* === Blockquote Style ===
+*/
+
+blockquote {
+  display: block;
+  padding: 1.25em 0;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+blockquote.left-pull {
+  margin-left: -40%;
+}
+
+@media only screen and (max-width: 641px) {
+  blockquote.left-pull {
+    margin-left: 0;
+  }
+}
+
+blockquote.right-pull {
+  width: 130%;
+  margin-left: 15%;
+}
+
+@media only screen and (max-width: 641px) {
+  blockquote.right-pull {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+blockquote .video {
+  margin-bottom: 1.5em;
+}
+
+blockquote p {
+  font-family: NeueHaasBold, Helvetica, sans-serif;
+  font-size: 2em;
+  color: #ac2eff;
+  line-height: 1.2;
+}
+
+blockquote p:first-of-type:before {
+  content: "\201C";
+}
+
+blockquote p:last-of-type:after {
+  content: "\201D";
+}
+
+blockquote span {
+  display: block;
+  text-align: right;
+}
+
+.quote-position,
+.quote-source {
+  color: #000;
+  opacity: 0.5;
+}
+
+.quote-source {
+  font-family: NeueHaasBold, Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding-bottom: 0.25em;
+  margin-top: -1em;
+}
+
+.quote-source:before {
+  content: "\2014 \00a0";
+}
+
+.quote-position {
+  font-family: AndaleMono, monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-right: -0.15em;
+  font-size: 0.75em;
+  font-weight: 700;
+}
+
+.quote-position + .quote-position {
+  margin-top: 0.5em;
+}
+
+/*
+* === <main> Main Styles ===
+*/
+
+main {
+  overflow: hidden;
 }

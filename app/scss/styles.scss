@@ -1,5 +1,370 @@
+/**
+OSTRICH CSS
+Brought to you by Jeremy Smith.
+**/
+
+/*
+* === HTML Fluid Typography ===
+*/
+
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: url("/fonts/NeueHaasGroteskDisplay.woff2") format("woff2"),
+    url("/fonts/NeueHaasGroteskDisplay.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeueHaasDisplayBold";
+  src: url("/fonts/NeueHaasGroteskDisplayBold.woff2") format("woff2"),
+    url("/fonts/NeueHaasGroteskDisplayBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeueHaas";
+  src: url("/fonts/NeueHaasGroteskText.woff2") format("woff2"),
+    url("/fonts/NeueHaasGroteskText.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeueHaasBold";
+  src: url("/fonts/NeueHaasGroteskTextBold.woff2") format("woff2"),
+    url("/fonts/NeueHaasGroteskTextBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeueHaasItalic";
+  src: url("/fonts/NeueHaasGroteskTextItalic.woff2") format("woff2"),
+    url("/fonts/NeueHaasGroteskTextItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AndaleMono";
+  src: url("/fonts/Andale-Mono.woff2") format("woff2"),
+    url("/fonts/Andale-Mono.woff") format("woff");
+}
+
+html {
+  font-size: calc(1em + 1vw);
+}
+
+/*
+* — Fluid Typography Breakpoints —
+*/
+
+@media screen and (min-width: 50em) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  html {
+    font-size: 1.5em;
+  }
+}
+
+html {
+  font-family: NeueHaasText, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+
+/*
+* === Resets & Fixes ===
+*/
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: none;
+}
+
 body {
-  margin:0px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(172, 46, 255, 0.125);
+}
+
+::-moz-selection {
+  background: rgba(172, 46, 255, 0.125);
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+* + address,
+* + dl,
+* + fieldset,
+* + figure,
+* + pre {
+  margin-top: 16px;
+}
+
+address,
+blockquote,
+dl,
+fieldset,
+figure,
+ol,
+p,
+pre,
+ul {
+  margin: 0 0 16px;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+video {
+  height: auto;
+  width: 100%;
+}
+
+::selection {
+  background: black;
+  color: #fff;
+  text-shadow: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+* === ol + li List Styles ===
+*/
+
+p + ol,
+p + ul {
+  margin-top: -1.2em;
+}
+
+main ol,
+main ul {
+  margin-bottom: 1em;
+}
+
+main ol li,
+main ul li {
+  font-family: NeueHaas, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #000;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 0.3em;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+main ol li strong,
+main ul li strong {
+  font-family: NeueHaasBold, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 641px) {
+  main ol li,
+  main ul li {
+    font-size: 1.5em;
+  }
+}
+
+main ol li a,
+main ul li a {
+  color: #1ff042;
+}
+
+main ul li:before {
+  position: absolute;
+  left: 0;
+  top: 0.525em;
+  display: block;
+  background: #000;
+  height: 0.35em;
+  width: 0.35em;
+  content: "";
+}
+
+main ol {
+  counter-reset: li;
+}
+
+main ol li:before {
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  font-family: NeueHaasBold, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #000;
+  font-size: 0.85em;
+  opacity: 0.35;
+  content: counter(li) ".";
+  counter-increment: li;
+}
+
+/*
+* === SWUP Animations ===
+*/
+
+.a-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+html.is-animating .a-fade {
+  opacity: 0;
 }
 
 .page {
@@ -7,14 +372,6 @@ body {
   width: 100%;
 }
 
-/**
-SWUP Config
-**/
-
-.a-fade {
-  transition: .4s;
-  opacity: 1;
-}
-html.is-animating .a-fade{
-  opacity: 0;
+.padded {
+  padding: 3em;
 }

@@ -23,9 +23,13 @@
     <script src="/js/lib/swup.min.js" type="application/javascript"></script>
 
     <!--build:js js/main.min.js-->
+    <script src="js/lib/loader.js"></script>
+    <script src="js/lib/swup.min.js"></script>
     <script src="js/lib/test.js"></script>
+    
     <!--endbuild-->
     <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/loader.css" type="text/css">
     <link rel="stylesheet" href="css/colors.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/components.css" type="text/css">
@@ -35,6 +39,11 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="loader-body" id="loader">
+            <div class="loader"></div>
+        </div>
+        <!-- END Preloader-->
 
     <div class="page">
         <div class="a-fade">

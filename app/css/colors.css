@@ -1,5 +1,8 @@
 :root {
+  --htmlBackground: #010101;
   --intro-bg-color: #010101;
+  --introTitle: #fff;
+  --introText: #ffffffee;
   --primary: #010101;
   --secondary: #fff;
   --primary-button-bg: linear-gradient(90deg, #0069ff, #1633ff);

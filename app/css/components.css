@@ -123,7 +123,8 @@ p.large {
   p {
     font-size: 1.6em; } }
 
-p a, p strong {
+p a,
+p strong {
   font-family: NeueHaasBold, Helvetica, sans-serif; }
 
 p em {
@@ -220,12 +221,11 @@ main {
 * === Intro (Hero) Styles ===
 */
 .introWrapper {
-  background-color: #010101;
   min-height: 100vh;
   z-index: -5; }
 
-.introTitle {
+.introTitle h2 {
   color: var(--introTitle); }
 
-.introText {
+.introText p {
   color: var(--introText); }

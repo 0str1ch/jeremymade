@@ -140,7 +140,7 @@ p {
 }
 
 p.large {
-  font-size: 1.6em;
+  font-size: 1.3em;
 }
 
 @media only screen and (max-width: 641px) {
@@ -264,4 +264,22 @@ blockquote span {
 
 main {
   overflow: hidden;
+}
+
+/*
+* === Intro (Hero) Styles ===
+*/
+
+.introWrapper {
+  background-color: #010101;
+  min-height: 100vh;
+  z-index: -5;
+}
+
+.introTitle {
+  color: var(--introTitle);
+}
+
+.introText {
+  color: var(--introText);
 }

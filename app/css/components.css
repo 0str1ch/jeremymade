@@ -117,7 +117,8 @@ p {
   margin-bottom: 1.15em; }
 
 p.large {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  color: var(--introText); }
 
 @media only screen and (max-width: 641px) {
   p {
@@ -229,3 +230,7 @@ main {
 
 .introText p {
   color: var(--introText); }
+
+/*
+* === <pre> and <code> styles ===
+*/

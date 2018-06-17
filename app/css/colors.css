@@ -10,3 +10,19 @@
   --secondary-button-bg: grey;
   --secondary-button-color: #fff;
   --paragraph-color: #222; }
+
+/* RAINBOW HOVER BORDER??
+:hover {
+    border-right: 1px solid;
+    -webkit-border-image: 
+    -webkit-linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  -webkit-border-image: 
+    -webkit-linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  -moz-border-image:
+    -moz-linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);    
+  -o-border-image:
+    -o-linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image:
+  linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  }
+  */

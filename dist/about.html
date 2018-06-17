@@ -36,9 +36,51 @@
             <a href="/about.html">Go to other page</a>
             </main>
         </div>
-    <script>
-    var swup = new Swup()
-    </script>
+        <script>
+                var options = {
+                    cache: false,
+                    preload: false,
+                    debugMode: true
+                }
+                var swup = new Swup(options)
+            </script>
+            <script class="reload">
+                $('.link').mouseenter(function (e) {
+                    e.preventDefault();
+                    var client = $(this).attr('data-background');
+        
+                    $('.background-divs').removeClass('active');
+                    $('.background-divs.' + client).addClass('active');
+        
+                });
+        
+                $('.link').mouseleave(function (e) {
+                    e.preventDefault();
+                    var client = $(this).attr('data-background');
+        
+                    $('.background-divs').removeClass('active');
+        
+        
+                });
+            </script>
+            <script>
+                // trigger page view for GTM
+                document.addEventListener('swup:pageView', event => {
+                    dataLayer.push({
+                        'event': 'VirtualPageview',
+                        'virtualPageURL': window.location.pathname,
+                        'virtualPageTitle': document.title
+                    });
+                });
+        
+                // load scripts for replaced elements
+                document.addEventListener('swup:contentReplaced', event => {
+                    swup.options.elements.forEach((selector) => {
+                        // load scripts for all elements with 'selector'
+                    })
+                });
+            </script>
+        </body>
 </body>
 
 </html>

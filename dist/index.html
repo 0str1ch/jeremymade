@@ -20,7 +20,7 @@
     <meta property="og:description" content="Your friendly neighborhood web designer." />
     <meta property="og:image:secure_url" content="https://richpreview.com/richpreview.png" />
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <script src="/js/lib/swup.min.js" type="application/javascript"></script>
+
 
     <script src="js/main.min.js"></script>
     <link rel="stylesheet" href="css/styles.min.css">
@@ -40,6 +40,11 @@
     <div class="page">
         <div class="a-fade">
             <main id="swup">
+                <!-- Client Images START-->
+                <div class="background-divs green"></div>
+                <div class="background-divs blue"></div>
+                <div class="background-divs yellow"></div>
+                <!-- Client Images END-->
                 <div class="strokes">
                     <div></div>
                     <div></div>
@@ -54,24 +59,38 @@
                     <div></div>
                     <div></div>
                 </div>
+
                 <section class="introWrapper padded">
-                    <div class="profile">
-                        <img class="round" src="images/me-bw.jpg">
+                    <div class="introContent">
+                        <div class="introTitle">
+                            <h2>
+                                Data is the new oil.
+                            </h2>
+                        </div>
+                        <div class="introText">
+                            <p class="">Typography. Digital design. Web development. Print graphics. I’m one of those rare
+                                <em>Swiss Army</em> knife types of team members: comfortable operating in both
+                                <strong>front-end design and development roles.</strong>
+                            </p>
+                        </div>
                     </div>
-                    <div class="introTitle">
-                        <h2>
-                            Data is the new oil.
-                        </h2>
-                    </div>
-                    <div class="introText">
-                        <p class="">Typography. Digital design. Web development. Print graphics. I’m one of those rare
-                            <i>Swiss Army</i> knife types of team members: comfortable operating in both
-                            <strong>front-end design and development roles.</strong>
-                        </p>
-                    </div>
+
                 </section>
                 <section class="part1 padded">
-                    <div class="content">
+                    <div class="portfolio content">
+                        <!-- START Clients for Portfolio -->
+                        <ul class="clients">
+                            <li>
+                                <a class="link" data-background="green" href="/about.html">Adidas</a>
+                            </li>
+                            <li>
+                                <a class="link" data-background="blue" href="">Nike</a>
+                            </li>
+                            <li>
+                                <a class="link" data-background="yellow" href="">Jordan</a>
+                            </li>
+                        </ul>
+                        <!-- START Clients for Portfolio -->
                         <ul>
                             <li>Batman</li>
                             <li>Robin</li>
@@ -90,6 +109,9 @@
                         <h3>
                             section title
                         </h3>
+                        <div class="profile" onmouseover="addClass(this, 'clientHover');" onmouseout="removeClass(this, 'clientHover');">
+                            <img class="round" src="images/me-bw.jpg">
+                        </div>
                         <p class="large">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Mauris vitae ultricies leo integer malesuada nunc. Nullam eget felis eget nunc lobortis mattis
@@ -110,9 +132,12 @@
                             praesent elementum.
                         </p>
                         <pre>
+                            <code>
 .asshat {
 text-weight: bold;
 }
+                            </code>
+
                         </pre>
                         <a href="/about.html">Go to other page</a>
                     </div>
@@ -122,8 +147,51 @@ text-weight: bold;
         </div>
 
     </div>
+
     <script>
-        var swup = new Swup()
+        var options = {
+            cache: false,
+            preload: false,
+            debugMode: true
+        }
+        var swup = new Swup(options)
+    </script>
+    <script>
+    $(".link").mouseenter(function(e) {
+  e.preventDefault();
+  var client = $(this).attr("data-background");
+
+  $(".background-divs").removeClass("active");
+  $(".background-divs." + client).addClass("active");
+});
+
+$(".link").mouseleave(function(e) {
+  e.preventDefault();
+  var client = $(this).attr("data-background");
+
+  $(".background-divs").removeClass("active");
+});
+
+// load scripts for replaced elements
+document.addEventListener("swup:contentReplaced", event => {
+  swup.options.elements.forEach(selector => {
+    $(".link").mouseenter(function(e) {
+      e.preventDefault();
+      var client = $(this).attr("data-background");
+
+      $(".background-divs").removeClass("active");
+      $(".background-divs." + client).addClass("active");
+    });
+
+    $(".link").mouseleave(function(e) {
+      e.preventDefault();
+      var client = $(this).attr("data-background");
+
+      $(".background-divs").removeClass("active");
+    });
+  });
+});
+
     </script>
 </body>
 

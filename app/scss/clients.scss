@@ -1,53 +1,73 @@
-.background-divs {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
-    visibility: visible;
+.clientList {
+  display: block;
+  width: 80%;
+  position: relative;
+  font-family: NeueHaasDisplayBold, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 3.5em;
+  color: #ac2eff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.clientList:hover > a:hover {
+    color: #fff;
+}
+.clientList:hover > a {
+    color: rgba(255, 255, 255, 0.61);
+}
+
+.clientList a {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.clientList a:hover {
+  color: #fff;
+}
+
+.background-divs {
+  z-index: -99999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  visibility: visible;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .background-divs.blue {
-    background-color: blue;
+  background-image: linear-gradient(
+    #ab2effdc,
+      #ac2eff
+    ),
+    url(../images/int2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .background-divs.green {
-    background-color: green;
+  background-color: green;
 }
 
 .background-divs.yellow {
-    background-color: yellow;
-}
-
-.links {
-    position: absolute;
-    top: 0;
-    left:0;
-    z-index: 5;
-}
-
-.links  li {
-    border: 1px solid white;
-    margin: 30px 0;
-    padding: 10px;
-}
-
-.links li a {
-    color: white;
+  background-color: yellow;
 }
 
 .active {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }

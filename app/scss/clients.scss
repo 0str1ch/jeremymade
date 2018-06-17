@@ -5,19 +5,18 @@
   font-family: NeueHaasDisplayBold, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 3.5em;
-  color: #ac2eff;
+  color: #fff;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
-.clientList:hover > a:hover {
-    color: #fff;
-}
+
 .clientList:hover > a {
-    color: rgba(255, 255, 255, 0.61);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .clientList a {
+    color: #fff;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;

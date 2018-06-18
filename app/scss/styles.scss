@@ -263,9 +263,21 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+svg {
+  vertical-align: middle;
+}
+
 video {
   height: auto;
   width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.h100 {
+  height: 100%;
 }
 
 ::selection {
@@ -369,6 +381,23 @@ main ol li:before {
 }
 html.is-animating .a-fade {
   opacity: 0;
+}
+
+.appFrame {
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.appBody {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 .page {

@@ -1,0 +1,49 @@
+.headerHero {
+  padding-left: 3em;
+  padding-right: 3em;
+  height: 10vh; }
+
+.logo {
+  flex-grow: 1; }
+
+.profilePhoto {
+  width: 3em;
+  border-radius: 50%;
+  align-self: center; }
+
+.headerNav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%; }
+
+.navLinks {
+  border: 2px solid transparent;
+  margin: 0 1em 0 1em;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  color: #fff; }
+
+.navLinks:hover {
+  color: #fff;
+  border: 2px solid #1ff042; }
+
+/*.logoText {
+  color: #fff;
+  margin: 0 0.5em 0 1em;
+  font-family: NeueHaasDisplayBold;
+}*/
+/*
+* === Please Scroll Down ===
+*/
+.scrollWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+
+.scrolldown {
+  color: #fff;
+  writing-mode: vertical-lr; }
+
+.scrolldown {
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1); }

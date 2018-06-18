@@ -1,6 +1,4 @@
 .headerHero {
-  padding-left: 3em;
-  padding-right: 3em;
   height: 10vh; }
 
 .logo {
@@ -9,7 +7,8 @@
 .profilePhoto {
   width: 3em;
   border-radius: 50%;
-  align-self: center; }
+  align-self: center;
+  vertical-align: middle; }
 
 .headerNav {
   display: flex;
@@ -19,7 +18,7 @@
 
 .navLinks {
   border: 2px solid transparent;
-  margin: 0 1em 0 1em;
+  margin: 0 0 0 1em;
   padding: 0.5em 1.5em;
   text-decoration: none;
   color: #fff; }
@@ -38,12 +37,25 @@
 */
 .scrollWrapper {
   display: flex;
-  justify-content: center;
-  align-items: flex-end; }
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 30px;
+  left: -3em;
+  width: 100%; }
 
-.scrolldown {
-  color: #fff;
-  writing-mode: vertical-lr; }
+@media only screen and (max-width: 641px) {
+  .scrollWrapper {
+    left: -2em; } }
 
 .scrolldown {
   transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
+
+.scrolldown a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  writing-mode: vertical-lr; }
+
+.scrolldown a:hover {
+  text-decoration: none;
+  color: white; }

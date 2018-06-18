@@ -238,6 +238,17 @@ main {
   min-height: 90vh;
   z-index: -5; }
 
+.introContainer {
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center; }
+
+.introContent {
+  align-self: center;
+  margin: auto;
+  top: -5vh;
+  position: relative; }
+
 .introTitle h2 {
   color: var(--introTitle); }
 

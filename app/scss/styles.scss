@@ -91,6 +91,13 @@ html {
   -ms-overflow-style: -ms-autohiding-scrollbar; /* MS Edge and IE scrollbar hide */
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-kerning: auto;
+}
+
 blockquote,
 q {
   quotes: none;
@@ -272,20 +279,6 @@ video {
   width: 100%;
 }
 
-.flex {
-  display: flex;
-}
-
-.h100 {
-  height: 100%;
-}
-
-::selection {
-  background: black;
-  color: #fff;
-  text-shadow: none;
-}
-
 article,
 aside,
 details,
@@ -400,20 +393,7 @@ html.is-animating .a-fade {
     flex: 1 1 auto;
 }
 
-.page {
-  min-height: 100vh;
-  width: 100%;
-}
 
-.padded {
-  padding: 3em;
-}
-
-@media only screen and (max-width: 641px) {
-  .padded {
-    padding: 2em;
-  }
-}
 
 /* -------------------------------- 
 

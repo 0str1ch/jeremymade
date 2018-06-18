@@ -51,8 +51,22 @@
     <div class="appFrame">
 
         <div class="appBody">
-            
-            <header class="headerHero">
+
+            <header class="headerHero padded-lr">
+
+                <!-- START Mobile Nav + Header-->
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="/" onclick="closeNav()">Home</a>
+                        <a href="/about.html" onclick="closeNav()">About</a>
+                        <a href="/about.html" onclick="closeNav()">Work</a>
+                        <a href="/about.html" onclick="closeNav()">Codebox</a>
+                        <a href="/about.html" onclick="closeNav()">Contact</a>
+                    </div>
+                </div>
+                <!-- END Mobile Nav + Header -->
+
                 <div class="flex h100">
                     <nav class="headerNav">
                         <div class="logo">
@@ -60,11 +74,12 @@
                                 <img class="profilePhoto" src="images/me-bw.jpg"></img>
                             </a>
                         </div>
-                        <div class="menu">
+                        <div class="menu desktopMenu">
                             <a href="/about.html" class="navLinks">About</a>
                             <a href="#" class="navLinks">Work</a>
                             <a href="#" class="navLinks">Contact</a>
                         </div>
+                        <span class="burgerContainer mobileMenu" onclick="openNav()">&#9776; open</span>
                     </nav>
                 </div>
             </header>
@@ -92,34 +107,35 @@
                         <div></div>
                     </div>
 
-                    <section class="introWrapper padded flex">
-                        <div class="introContent">
-                            <div class="introTitle">
-                                <h2>
-                                    Data is the new oil.
-                                </h2>
-                            </div>
-                            <div class="introText">
-                                <p class="">Typography. Digital design. Web development. Print graphics. I’m one of those rare
-                                    <em>Swiss Army</em> knife types of team members: comfortable operating in both
-                                    <strong>front-end design and development roles.💡 🧠</strong>
-                                </p>
+                    <section class="introWrapper padded-lr">
+                        <div class="introContainer flex">
+                            <div class="introContent">
+                                <div class="introTitle textCenter">
+                                    <h2 class="scrolldown">
+                                        Data is the new oil.
+                                    </h2>
+                                </div>
+                                <div class="introText textCenter">
+                                    <p class="scrolldown">I create imaginative applications that monetize data.💡 🧠</strong>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="scrollWrapper">
                             <div class="scrolldown">
-                                <span>
-                                    Scroll
-                                    <svg class="scrollArrow ArrowLink-icon" aria-hidden="true">
-                                        <use xlink:href="#arrow-down-long"></use>
-                                    </svg>
-                                </span>
+                                <a href="#scrollingDown">
+                                    <span>
+                                        Scroll
+                                        <svg class="scrollArrow ArrowLink-icon" aria-hidden="true">
+                                            <use xlink:href="#arrow-down-long"></use>
+                                        </svg>
+                                    </span>
+                                </a>
                             </div>
                         </div>
-
                     </section>
 
-                    <section class="part1 padded flex">
+                    <section id="scrollingDown" class="part1 padded flex">
                         <div class="portfolio content">
                             <!-- START Clients for Portfolio -->
                             <span class="clientList">
@@ -242,7 +258,7 @@
     </script>
     <script>
         $(window).scroll(function () {
-            if ($(window).scrollTop() >= 50) {
+            if ($(window).scrollTop() >= 150) {
                 $(".scrolldown").css("visibility", "hidden"),
                     $(".scrolldown").css("opacity", "0");
             } else {
@@ -250,6 +266,15 @@
                     $(".scrolldown").css("opacity", "1");
             }
         });
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
     </script>
 </body>
 

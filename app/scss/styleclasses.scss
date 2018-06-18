@@ -1,0 +1,43 @@
+/*
+* === Style Classes ===
+*/
+
+.flex {
+  display: flex;
+}
+
+.h100 {
+  height: 100%;
+}
+
+::selection {
+  background: black;
+  color: #fff;
+  text-shadow: none;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.padded {
+  padding: 3em;
+}
+
+@media only screen and (max-width: 641px) {
+  .padded {
+    padding: 2em;
+  }
+}
+
+.padded-lr {
+    padding-left: 3em;
+    padding-right: 3em
+  }
+  
+  @media only screen and (max-width: 641px) {
+    .padded-lr {
+        padding-left: 2em;
+        padding-right: 2em
+      }
+  }

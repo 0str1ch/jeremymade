@@ -1,11 +1,24 @@
 /*
 * === Style Classes ===
 */
+.white {
+  color: #fff; }
+
+.lightText {
+  color: rgba(255, 255, 255, 0.87); }
+
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
 
 .h100 {
   height: 100%; }
+
+::-moz-selection {
+  background: black;
+  color: #fff;
+  text-shadow: none; }
 
 ::selection {
   background: black;

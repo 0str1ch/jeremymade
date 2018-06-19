@@ -1,19 +1,57 @@
+/*
+* === Headroom.js ===
+*/
+.headroom {
+  will-change: transform;
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s; }
+
+.headroom--pinned {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%); }
+
+.headroom--unpinned {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
+
 .headerHero {
-  height: 10vh; }
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%; }
+
+/*.scrollhideNav {
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: 0.3s;
+  }*/
+.fixed {
+  position: fixed; }
 
 .logo {
-  flex-grow: 1; }
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
 
 .profilePhoto {
   width: 3em;
   border-radius: 50%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   vertical-align: middle; }
 
 .headerNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%; }
 
 .navLinks {
@@ -25,7 +63,12 @@
 
 .navLinks:hover {
   color: #fff;
-  border: 2px solid #1ff042; }
+  border: 2px solid transparent;
+  /* Rainbow border gradient */
+  -o-border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+     border-image: -webkit-gradient(linear, left top, right bottom, from(#b827fc), color-stop(25%, #2c90fc), color-stop(50%, #b8fd33), color-stop(75%, #fec837), to(#fd1892));
+     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1; }
 
 /*.logoText {
   color: #fff;
@@ -36,26 +79,52 @@
 * === Please Scroll Down ===
 */
 .scrollWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 30px;
-  left: -3em;
-  width: 100%; }
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* align-items: flex-end; */
+  /* position: absolute; */
+  /* bottom: 30px; */
+  /* left: -3em; */
+  width: 100%;
+  margin-top: -15vh;
+  /*transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);*/ }
 
 @media only screen and (max-width: 641px) {
   .scrollWrapper {
     left: -2em; } }
 
 .scrolldown {
-  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
+  position: absolute;
+  /* height: 100vh; */
+  text-align: right;
+  /* bottom: 2em; */
+  top: 82vh;
+  left: -3em;
+  -webkit-transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 100%; }
+
+@media only screen and (max-width: 641px) {
+  .scrolldown {
+    left: -2em; } }
 
 .scrolldown a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
-  writing-mode: vertical-lr; }
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }
 
 .scrolldown a:hover {
   text-decoration: none;
-  color: white; }
+  color: white;
+  -webkit-transform: translate3d(0, 0.2em, 0);
+          transform: translate3d(0, 0.2em, 0); }

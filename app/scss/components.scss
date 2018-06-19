@@ -278,7 +278,23 @@ blockquote span {
 */
 
 main {
+  height: 100%;
+  width: 100%;
   overflow: hidden;
+}
+
+main .mainContent {
+  height: 100%;
+  width: 100%;
+}
+
+.scroll-div {
+  position: absolute;
+  bottom: 70px;
+  color: rgb(77, 77, 77);
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 100%;
+  text-align: center;
 }
 
 /*
@@ -286,21 +302,24 @@ main {
 */
 
 .introWrapper {
-  min-height: 90vh;
+  height: 100%;
   z-index: -5;
 }
 
 .introContainer {
-  min-height: 90vh;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
 }
 
 .introContent {
-  align-self: center;
   margin: auto;
-  top: -5vh;
+  width: 100%;
+  /*margin-top: -10%;*/
   position: relative;
+}
+
+.heroTitle {
+  font-size: 6em;
+  color: #fff;
 }
 
 .introTitle h2 {
@@ -309,6 +328,16 @@ main {
 
 .introText p {
   color: var(--introText);
+}
+
+.scrollhideTitle {
+  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: 0.1s;
+}
+
+.scrollhideText {
+  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: 0.2s;
 }
 
 /*

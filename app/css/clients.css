@@ -4,7 +4,6 @@
   position: relative;
   font-family: NeueHaasDisplayBold, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 3.5em;
   color: #fff;
   letter-spacing: -0.01em;
   line-height: 1.2; }
@@ -15,8 +14,6 @@
 .clientList a {
   color: #fff;
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 .clientList a:hover {
@@ -34,11 +31,10 @@
   left: 0;
   visibility: visible;
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 .background-divs.blue {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ab2effdc), to(#ac2eff)), url(../images/int2.jpg);
   background-image: linear-gradient(#ab2effdc, #ac2eff), url(../images/int2.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
@@ -53,6 +49,4 @@
   opacity: 1;
   visibility: visible;
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }

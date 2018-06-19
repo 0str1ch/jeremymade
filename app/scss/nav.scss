@@ -1,9 +1,38 @@
+/*
+* === Headroom.js ===
+*/
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+    transition-delay: 0.2s;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
 .headerHero {
-    height: 10vh;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%;
+}
+
+/*.scrollhideNav {
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: 0.3s;
+  }*/
+
+
+
+.fixed {
+  position: fixed;
 }
 
 .logo {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .profilePhoto {
@@ -14,10 +43,10 @@
 }
 
 .headerNav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
 .navLinks {
@@ -30,7 +59,9 @@
 
 .navLinks:hover {
   color: #fff;
-  border: 2px solid #1ff042;
+  border: 2px solid transparent; /* Rainbow border gradient */
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
 }
 
 /*.logoText {
@@ -44,34 +75,49 @@
 */
 
 .scrollWrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: flex-end; */
+  /* position: absolute; */
+  /* bottom: 30px; */
+  /* left: -3em; */
+  width: 100%;
+  margin-top: -15vh;
+  /*transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);*/
+}
+
+@media only screen and (max-width: 641px) {
+  .scrollWrapper {
+    left: -2em;
+  }
+}
+
+.scrolldown {
     position: absolute;
-    bottom: 30px;
+    /* height: 100vh; */
+    text-align: right;
+    /* bottom: 2em; */
+    top: 82vh;
     left: -3em;
+    transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
     width: 100%;
 }
 
 @media only screen and (max-width: 641px) {
-    .scrollWrapper {
-      left: -2em;
+    .scrolldown {
+        left: -2em;
     }
-  }
-
-
-
-.scrolldown {
-    transition: all 1.2s cubic-bezier(.19, 1, .22, 1);
 }
 
 .scrolldown a {
-    text-decoration: none;
-    color: rgba($color: #fff, $alpha: 0.5);
-    writing-mode: vertical-lr;
+  text-decoration: none;
+  color: rgba($color: #fff, $alpha: 0.5);
+  writing-mode: vertical-lr;
+  transition: transform .2s ease-in-out;
 }
 
 .scrolldown a:hover {
-    text-decoration: none;
-    color: rgba($color: #fff, $alpha: 1.0)
+  text-decoration: none;
+  color: rgba($color: #fff, $alpha: 1);
+  transform: translate3d(0, 0.2em, 0);
 }

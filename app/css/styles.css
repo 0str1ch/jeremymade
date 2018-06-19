@@ -48,17 +48,19 @@ html {
   font-family: NeueHaasText, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
   background: var(--htmlBackground);
   color: rgba(0, 0, 0, 0.87);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 html {
-  min-height: 100%;
   height: 100%;
+  width: 100%;
   -webkit-text-size-adjust: none; }
 
 /*
@@ -71,8 +73,10 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-  font-kerning: auto; }
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  -webkit-font-kerning: auto;
+          font-kerning: auto; }
 
 blockquote,
 q {
@@ -97,20 +101,25 @@ body {
 
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 :after,
 :before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+::-moz-selection {
+  background: var(--primary); }
 
 ::selection {
   background: var(--primary); }
 
 ::-moz-selection {
   background: var(--primary); }
+
+button:focus,
+select:focus {
+  outline: none; }
 
 a,
 abbr,
@@ -315,6 +324,7 @@ main ol li:before {
 * === SWUP Animations ===
 */
 .a-fade {
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   opacity: 1; }
 
@@ -323,18 +333,24 @@ html.is-animating .a-fade {
 
 .appFrame {
   -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-box-align: stretch;
+          align-items: stretch;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   height: 100%;
-  min-height: 100vh;
-  position: relative; }
+  /*min-height: 100vh;*/
+  position: relative;
+  -webkit-overflow-scrolling: touch; }
 
 .appBody {
   -ms-flex: 1 1 auto;
-  flex: 1 1 auto; }
+  -webkit-box-flex: 1;
+          flex: 1 1 auto; }
 
 /* -------------------------------- 
 

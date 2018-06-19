@@ -51,7 +51,42 @@
     <div class="appFrame">
 
         <div class="appBody">
-            
+
+            <header class="headerHero padded-lr">
+
+                <!-- START Mobile Nav + Header-->
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="/" onclick="closeNav()">Home</a>
+                        <a href="/about.html" onclick="closeNav()">About</a>
+                        <a href="/about.html" onclick="closeNav()">Work</a>
+                        <a href="/about.html" onclick="closeNav()">Codebox</a>
+                        <a href="/about.html" onclick="closeNav()">Contact</a>
+                    </div>
+                </div>
+                <!-- END Mobile Nav + Header -->
+
+                <div class="flex h100">
+                    <nav class="headerNav">
+                        <div class="logo">
+                            <a href="/">
+                                <img class="profilePhoto" src="images/me-bw.jpg"></img>
+                            </a>
+                        </div>
+                        <div class="menu desktopMenu">
+                            <a href="/about.html" class="navLinks">About</a>
+                            <a href="#" class="navLinks">Work</a>
+                            <a href="#" class="navLinks">Contact</a>
+                        </div>
+                        <span class="burgerContainer mobileMenu" onclick="openNav()">&#9776; open</span>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="a-fade">
+                <main id="swup">
+
                     <!-- Client Images START-->
                     <div class="background-divs green"></div>
                     <div class="background-divs blue"></div>
@@ -72,49 +107,21 @@
                         <div></div>
                     </div>
 
-                    <!-- START Mobile Nav + Header-->
-                    <div id="myNav" class="overlay">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <div class="overlay-content">
-                            <a href="/" onclick="closeNav()">Home</a>
-                            <a href="/about.html" onclick="closeNav()">About</a>
-                            <a href="/about.html" onclick="closeNav()">Work</a>
-                            <a href="/about.html" onclick="closeNav()">Codebox</a>
-                            <a href="/about.html" onclick="closeNav()">Contact</a>
-                        </div>
-                    </div>
-                    <!-- END Mobile Nav + Header -->
-
-                    <div class="headerHero padded-lr fixed">
-                        <nav class="headerNav flex h100 scrollhideNav">
-                            <div class="logo">
-                                <a href="/">
-                                    <img class="profilePhoto" src="images/me-bw.jpg"></img>
-                                </a>
-                            </div>
-                            <div class="menu desktopMenu">
-                                <a href="/about.html" class="navLinks">About</a>
-                                <a href="#" class="navLinks">Work</a>
-                                <a href="#" class="navLinks">Contact</a>
-                            </div>
-                            <span class="burgerContainer mobileMenu" onclick="openNav()">&#9776; open</span>
-                        </nav>
-
-                    </div>
-
-
-                    <div class="a-fade">
-                            <main id="swup">
-
-
                     <section class="introWrapper padded-lr">
                         <div class="introContainer flex">
                             <div class="introContent">
-                                <h2 class="textCenter white scrollhideTitle">
-                                    Data is thfsdfsdfsdfdse new oil.
-                                </h2>
-                                <p class="textCenter lightText scrollhideText">I create imaginative applications that monetize data.💡 🧠</p>
+                                <div class="introTitle textCenter">
+                                    <h2 class="scrolldown">
+                                        Data is the new oil.
+                                    </h2>
+                                </div>
+                                <div class="introText textCenter">
+                                    <p class="scrolldown">I create imaginative applications that monetize data.💡 🧠
+                                    </p>
+                                </div>
                             </div>
+                        </div>
+                        <div class="scrollWrapper">
                             <div class="scrolldown">
                                 <a href="#scrollingDown">
                                     <span>
@@ -126,33 +133,32 @@
                                 </a>
                             </div>
                         </div>
+                    </section>
+
+                    <section id="scrollingDown" class="part1 padded flex">
+                        <div class="portfolio content">
+                            <!-- START Clients for Portfolio -->
+                            <span class="clientList">
+                                <a class="link clients" data-background="green" href="/about.html">Goat House Records.</a>
+                                <a class="link clients" data-background="green" href="/about.html">Cross NY.</a>
+                                <a class="link clients" data-background="blue" href="/about.html">Moon's Bridge.</a>
+                                <a class="link clients" data-background="yellow" href="/about.html">Nicky K.</a>
+                                <a class="link clients" data-background="yellow" href="/about.html">Fix'd.</a>
+                                <a class="link clients" data-background="yellow" href="/about.html">DPI Creative.</a>
+                                <a class="link clients" data-background="yellow" href="/about.html">PalmTees Printing.</a>
+                                <a class="link clients" data-background="yellow" href="/about.html">Smithed.</a>
+                                <a class="link clients" data-background="yellow" href="/about.html">EWC Controls.</a>
+                                <a class="link clients" data-background="yellow" href="/about.html">Sunshine State Swimwear.</a>
+                                <a class="link clients" data-background="yellow" href="https://smithed.xyz">Etc.</a>
+                            </span>
+                            <!-- END Clients for Portfolio -->
+                        </div>
+                    </section>
+
+                </main>
             </div>
-            </section>
 
-            <section id="scrollingDown" class="part1 padded flex">
-                <div class="portfolio content">
-                    <!-- START Clients for Portfolio -->
-                    <span class="clientList">
-                        <a class="link clients" data-background="green" href="/about.html">Goat House Records.</a>
-                        <a class="link clients" data-background="green" href="/about.html">Cross NY.</a>
-                        <a class="link clients" data-background="blue" href="/about.html">Moon's Bridge.</a>
-                        <a class="link clients" data-background="yellow" href="/about.html">Nicky K.</a>
-                        <a class="link clients" data-background="yellow" href="/about.html">Fix'd.</a>
-                        <a class="link clients" data-background="yellow" href="/about.html">DPI Creative.</a>
-                        <a class="link clients" data-background="yellow" href="/about.html">PalmTees Printing.</a>
-                        <a class="link clients" data-background="yellow" href="/about.html">Smithed.</a>
-                        <a class="link clients" data-background="yellow" href="/about.html">EWC Controls.</a>
-                        <a class="link clients" data-background="yellow" href="/about.html">Sunshine State Swimwear.</a>
-                        <a class="link clients" data-background="yellow" href="https://smithed.xyz">Etc.</a>
-                    </span>
-                    <!-- END Clients for Portfolio -->
-                </div>
-            </section>
-
-            </main>
         </div>
-
-    </div>
     </div>
 
 
@@ -202,31 +208,12 @@
     </script>
     <script>
         $(window).scroll(function () {
-            if ($(window).scrollTop() >= 100) {
+            if ($(window).scrollTop() >= 150) {
+                $(".scrolldown").css("visibility", "hidden"),
                     $(".scrolldown").css("opacity", "0");
             } else {
+                $(".scrolldown").css("visibility", "initial"),
                     $(".scrolldown").css("opacity", "1");
-            }
-        });
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= 100) {
-                    $(".scrollhideNav").css("opacity", "0");
-            } else {
-                    $(".scrollhideNav").css("opacity", "1");
-            }
-        });
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= 250) {
-                    $(".scrollhideTitle").css("opacity", "0");
-            } else {
-                    $(".scrollhideTitle").css("opacity", "1");
-            }
-        });
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= 250) {
-                    $(".scrollhideText").css("opacity", "0");
-            } else {
-                    $(".scrollhideText").css("opacity", "1");
             }
         });
     </script>
@@ -239,16 +226,24 @@
             document.getElementById("myNav").style.height = "0%";
         }
     </script>
-    <script>
-        var options = [
-            {
-                selector: '.introContainer', // Mandatory, CSS selector
-                vh: 100,  // Mandatory, height in vh units
-            }
-        ];
-
-        var vhFix = new VHChromeFix(options);
-    </script>
+        <script>
+                var options = [
+                    {
+                        selector: '.introContainer', // Mandatory, CSS selector
+                        vh: 100,  // Mandatory, height in vh units
+                    },
+                    {
+                        selector: '.scrolldown',
+                        vh: 100
+                    },
+                    {
+                        selector: '.Horses',
+                        vh: 100
+                    }
+                ];
+        
+                var vhFix = new VHChromeFix(options);
+            </script>
 </body>
 
 </html>

@@ -10,8 +10,12 @@
   top: 0;
   left: 0;
   text-align: center;
-  justify-content: center;
-  align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: 0.5s all;
   transition: 0.5s all; }
 
 .loader {
@@ -23,19 +27,29 @@
   position: absolute;
   border-top-color: red;
   /*Here you can change color of the loader*/
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   -webkit-animation: 1s spin infinite linear;
-  -o-animation: 1s spin infinite linear;
   animation: 1s spin infinite linear; }
 
 .loader-body.done {
   visibility: hidden;
   opacity: 0; }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
 @keyframes spin {
   from {
-    transform: translate(-50%, -50%) rotate(0deg); }
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
   to {
-    transform: translate(-50%, -50%) rotate(360deg); } }
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }

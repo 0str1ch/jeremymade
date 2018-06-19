@@ -19,6 +19,7 @@
   left: 0;
   background-color: #fff;
   overflow-y: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s; }
 
 .overlay-content {
@@ -34,6 +35,7 @@
   font-size: 36px;
   color: #818181;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s; }
 
 .overlay a:hover, .overlay a:focus {

@@ -12,6 +12,7 @@
   max-width: 100%;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
 
 .ui-Icon {
@@ -41,14 +42,14 @@
 * === Typography & Font Config ===
 */
 * {
-  -moz-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
   -ms-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "alt" 1;
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
   font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
   -webkit-font-kerning: normal;
   -moz-font-kerning: normal;
   font-kerning: normal;
-  font-variant-ligatures: common-ligatures contextual; }
+  -webkit-font-variant-ligatures: common-ligatures contextual;
+          font-variant-ligatures: common-ligatures contextual; }
 
 h1:last-child,
 h1:only-child,
@@ -229,31 +230,60 @@ blockquote span {
 * === <main> Main Styles ===
 */
 main {
+  height: 100%;
+  width: 100%;
   overflow: hidden; }
+
+main .mainContent {
+  height: 100%;
+  width: 100%; }
+
+.scroll-div {
+  position: absolute;
+  bottom: 70px;
+  color: #4d4d4d;
+  -webkit-transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 100%;
+  text-align: center; }
 
 /*
 * === Intro (Hero) Styles ===
 */
 .introWrapper {
-  min-height: 90vh;
+  height: 100%;
   z-index: -5; }
 
 .introContainer {
-  min-height: 90vh;
-  justify-content: center;
-  align-items: center; }
+  height: 100vh; }
 
 .introContent {
-  align-self: center;
   margin: auto;
-  top: -5vh;
+  width: 100%;
+  /*margin-top: -10%;*/
   position: relative; }
+
+.heroTitle {
+  font-size: 6em;
+  color: #fff; }
 
 .introTitle h2 {
   color: var(--introTitle); }
 
 .introText p {
   color: var(--introText); }
+
+.scrollhideTitle {
+  -webkit-transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s; }
+
+.scrollhideText {
+  -webkit-transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s; }
 
 /*
 * === <pre> and <code> styles ===

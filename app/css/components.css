@@ -255,7 +255,6 @@ main .mainContent {
   z-index: -5; }
 
 .introContainer {
-  width: 100vmin;
   height: 100vmax;
   height: 100vh; }
 

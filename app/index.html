@@ -23,6 +23,8 @@
 
     <!--build:js js/main.min.js-->
     <script src="/js/lib/jquery.min.js"></script>
+    <script src="js/lib/headroom.js"></script>
+    <script src="js/lib/mobile-chrome-vh-fix.js"></script>
     <script src="js/lib/loader.js"></script>
     <script src="js/lib/test.js"></script>
     <script src="js/lib/portfolio.js"></script>
@@ -257,7 +259,7 @@
             document.getElementById("myNav").style.height = "0%";
         }
     </script>
-    <script src="js/lib/mobile-chrome-vh-fix.js"></script>
+    
     <script>
         var options = [
             {
@@ -269,7 +271,7 @@
         var vhFix = new VHChromeFix(options);
     </script>
     <!-- START Headroom.js -->
-    <script src="js/lib/headroom.js"></script>
+    
     <script>
         var myElement = document.querySelector("header");
         // construct an instance of Headroom, passing the element

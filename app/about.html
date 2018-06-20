@@ -20,16 +20,31 @@
     <meta property="og:image:secure_url" content="https://richpreview.com/richpreview.png" />
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <!--build:js js/jquery.min.js-->
+    <script src="/js/lib/jquery.min.js"></script>
+    <!--endbuild-->
+
+    <!--build:js js/swup.min.js-->
+    <script src="js/lib/swup.min.js"></script>
+    <!--endbuild-->
+
+    <!--build:js js/headroom.min.js-->
+    <script src="js/lib/headroom.js"></script>
+    <!--endbuild-->
+
+    <!--build:js js/mobile-chrome-vh-fix.min.js-->
+    <script src="js/lib/mobile-chrome-vh-fix.js"></script>
+    <!--endbuild-->
+
 
     <!--build:js js/main.min.js-->
-    <script src="/js/lib/jquery.min.js"></script>
-    <script src="js/lib/loader.js"></script>
-    <script src="js/lib/swup.min.js"></script>
     <script src="js/lib/test.js"></script>
     <script src="js/lib/portfolio.js"></script>
     <script src="js/lib/clients.js"></script>
-    <script src="js/lib/mobile-chrome-vh-fix.js"></script>
     <!--endbuild-->
+
+
+
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/loader.css" type="text/css">
     <link rel="stylesheet" href="css/colors.css" type="text/css">
@@ -113,7 +128,7 @@
                                 </a>
                             </div>
                             <div class="menu desktopMenu scrollhideNav">
-                                <a href="/about.html" class="navLinks" id="currentPage">About</a>
+                                <a href="/about.html" class="navLinks" class="currentPage">About</a>
                                 <a href="#" class="navLinks grow">Work</a>
                                 <a href="#" class="navLinks grow">Codebox</a>
                                 <a href="#" class="navLinks grow">Contact</a>
@@ -132,7 +147,7 @@
                         <div class="introContainer flex">
                             <div class="introContent">
                                 <h2 class="textCenter white">
-                                    Data is the new oil.
+                                    Jeremy
                                 </h2>
                                 <p class="textCenter lightText">I create imaginative applications that monetize data.</p>
                             </div>
@@ -176,7 +191,7 @@
         </div>
     </div>
 
-
+    
     <script>
         var options = {
             cache: false,
@@ -259,6 +274,7 @@
             document.getElementById("myNav").style.height = "0%";
         }
     </script>
+
     <script>
         var options = [
             {
@@ -270,7 +286,7 @@
         var vhFix = new VHChromeFix(options);
     </script>
     <!-- START Headroom.js -->
-    <script src="js/lib/headroom.js"></script>
+
     <script>
         var myElement = document.querySelector("header");
         // construct an instance of Headroom, passing the element

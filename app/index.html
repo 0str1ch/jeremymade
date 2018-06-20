@@ -21,7 +21,7 @@
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!-- START Font Preload -->
-    
+
     <link rel="preload" href="/fonts/NeueHaasGroteskDisplayBold.woff2" as="font">
     <link rel="preload" href="/fonts/NeueHaasGroteskText.woff2" as="font">
 
@@ -244,6 +244,16 @@
                 var headroom = new Headroom(myElement);
                 // initialise
                 headroom.init();
+
+                var options = [
+                    {
+                        selector: '.introContainer', // Mandatory, CSS selector
+                        vh: 100,  // Mandatory, height in vh units
+                    }
+                ];
+
+                var vhFix = new VHChromeFix(options);
+
             });
         });
 

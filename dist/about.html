@@ -169,7 +169,7 @@
         </div>
     </div>
 
-    
+
     <script>
         var options = {
             cache: false,
@@ -215,6 +215,16 @@
                 var headroom = new Headroom(myElement);
                 // initialise
                 headroom.init();
+            
+
+                var options = [
+                    {
+                        selector: '.introContainer', // Mandatory, CSS selector
+                        vh: 100,  // Mandatory, height in vh units
+                    }
+                ];
+
+                var vhFix = new VHChromeFix(options);
             });
         });
 

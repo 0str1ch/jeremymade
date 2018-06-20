@@ -34,8 +34,8 @@
   transition: all 0.5s ease; }
 
 .background-divs.blue {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ab2effdc), to(#ac2eff)), url(../images/int2.jpg);
-  background-image: linear-gradient(#ab2effdc, #ac2eff), url(../images/int2.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ab2eff), to(#ac2eff)), url(../images/int2.jpg);
+  background-image: linear-gradient(#ab2eff, #ac2eff), url(../images/int2.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
 

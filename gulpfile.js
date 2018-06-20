@@ -10,6 +10,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var htmlmin = require('gulp-htmlmin');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {

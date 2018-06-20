@@ -43,3 +43,14 @@
   .padded-lr {
     padding-left: 2em;
     padding-right: 2em; } }
+
+/*
+  * === Animation classes ===
+  */
+.grow {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.grow:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2); }

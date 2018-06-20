@@ -50,18 +50,22 @@
 }
 
 .navLinks {
-  border: 2px solid transparent;
   margin: 0 0 0 1em;
   padding: 0.5em 1.5em;
   text-decoration: none;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  
 }
+
 
 .navLinks:hover {
   color: #fff;
-  border: 2px solid transparent; /* Rainbow border gradient */
-  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
-  border-image-slice: 1;
+}
+
+#currentPage {
+    color: #fff;
+    transform: scale(1.2);
 }
 
 /*.logoText {

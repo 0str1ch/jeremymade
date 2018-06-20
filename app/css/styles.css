@@ -8,27 +8,39 @@ Brought to you by Jeremy Smith.
 */
 @font-face {
   font-family: "NeueHaasDisplay";
-  src: url("/fonts/NeueHaasGroteskDisplay.woff2") format("woff2"), url("/fonts/NeueHaasGroteskDisplay.woff") format("woff"); }
+  font-display: swap;
+  src: url("/fonts/NeueHaasGroteskDisplay.woff2") format("woff2"), url("/fonts/NeueHaasGroteskDisplay.woff") format("woff");
+  unicode-range: U+000-5FF; }
 
 @font-face {
   font-family: "NeueHaasDisplayBold";
-  src: url("/fonts/NeueHaasGroteskDisplayBold.woff2") format("woff2"), url("/fonts/NeueHaasGroteskDisplayBold.woff") format("woff"); }
+  font-display: swap;
+  src: url("/fonts/NeueHaasGroteskDisplayBold.woff2") format("woff2"), url("/fonts/NeueHaasGroteskDisplayBold.woff") format("woff");
+  unicode-range: U+000-5FF; }
 
 @font-face {
   font-family: "NeueHaas";
-  src: url("/fonts/NeueHaasGroteskText.woff2") format("woff2"), url("/fonts/NeueHaasGroteskText.woff") format("woff"); }
+  font-display: swap;
+  src: url("/fonts/NeueHaasGroteskText.woff2") format("woff2"), url("/fonts/NeueHaasGroteskText.woff") format("woff");
+  unicode-range: U+000-5FF; }
 
 @font-face {
   font-family: "NeueHaasBold";
-  src: url("/fonts/NeueHaasGroteskTextBold.woff2") format("woff2"), url("/fonts/NeueHaasGroteskTextBold.woff") format("woff"); }
+  font-display: swap;
+  src: url("/fonts/NeueHaasGroteskTextBold.woff2") format("woff2"), url("/fonts/NeueHaasGroteskTextBold.woff") format("woff");
+  unicode-range: U+000-5FF; }
 
 @font-face {
   font-family: "NeueHaasItalic";
-  src: url("/fonts/NeueHaasGroteskTextItalic.woff2") format("woff2"), url("/fonts/NeueHaasGroteskTextItalic.woff") format("woff"); }
+  font-display: swap;
+  src: url("/fonts/NeueHaasGroteskTextItalic.woff2") format("woff2"), url("/fonts/NeueHaasGroteskTextItalic.woff") format("woff");
+  unicode-range: U+000-5FF; }
 
 @font-face {
   font-family: "AndaleMono";
-  src: url("/fonts/Andale-Mono.woff2") format("woff2"), url("/fonts/Andale-Mono.woff") format("woff"); }
+  font-display: swap;
+  src: url("/fonts/Andale-Mono.woff2") format("woff2"), url("/fonts/Andale-Mono.woff") format("woff");
+  unicode-range: U+000-5FF; }
 
 html {
   font-size: calc(1em + 1vw); }

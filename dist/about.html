@@ -27,15 +27,12 @@
 
     <link rel="stylesheet" href="css/styles.min.css">
 
-    <script src="js/pageload.min.js"></script>
+
 
 </head>
 
 <body>
     <!-- Preloader -->
-    <div class="loader-body" id="loader">
-            <div class="loader"></div>
-        </div>
     <!-- END Preloader -->
 
     <!-- START SVG Symbols (Hidden on page load)-->
@@ -91,9 +88,10 @@
 
             <!-- START Page Transition Animation Wrapper -->
             <div class="a-fade">
-            <!-- END Page Transition Animation Wrapper -->
+                <!-- END Page Transition Animation Wrapper -->
 
-                <main id="swup"> <!-- SWUP Container is the entirety of the "main" selector. -->
+                <main id="swup">
+                    <!-- SWUP Container is the entirety of the "main" selector. -->
 
                     <header class="headroom headerHero padded-lr fixed">
                         <nav class="headerNav flex h100 ">
@@ -122,7 +120,7 @@
                         <div class="introContainer flex">
                             <div class="introContent">
                                 <h2 class="textCenter white">
-                                    Who am I?
+                                    Nice to meet you.
                                 </h2>
                                 <p class="textCenter lightText">Designer. Web developer. Typography enthusiast.</p>
                             </div>
@@ -143,8 +141,7 @@
                     <section id="scrollingDown" class="part1 padded flex">
                         <div class="portfolio content">
                             <div></div>
-                            <!-- JS Show Day and Message -->
-                            <p id="whatDay" class="textCenter lightText">What day is it?</p>
+
                             <!-- START Clients for Portfolio -->
                             <span class="clientList">
                                 <a class="link clients" data-background="green" href="/about.html">Goat House Records.</a>
@@ -160,6 +157,8 @@
                                 <a class="link clients" data-background="yellow" href="https://smithed.xyz">Etc.</a>
                             </span>
                             <!-- END Clients for Portfolio -->
+                            <!-- JS Show Day and Message -->
+                            <h2 id="whatDay" class="lightText">What day is it?</h2>
                         </div>
                     </section>
 
@@ -183,14 +182,14 @@
     <script src="js/main.min.js"></script>
 
 
-    <script>
+    <script type="text/javascript">
         var options = {
             cache: false,
             debugMode: true
         }
         var swup = new Swup(options)
     </script>
-    <script>
+    <script type="text/javascript">
         $(".link").mouseenter(function (e) {
             e.preventDefault();
             var client = $(this).attr("data-background");
@@ -260,7 +259,7 @@
                         }
                     case 'Thursday':
                         {
-                            msg = 'Thirsty Thursday!';
+                            msg = 'Have a rad Thursday!';
                             break;
                         }
                     case 'Friday':
@@ -276,7 +275,7 @@
         });
 
     </script>
-    <script>
+    <script type="text/javascript">
         $(window).scroll(function () {
             if ($(window).scrollTop() >= 100) {
                 $(".scrolldown").css("opacity", "0");
@@ -300,7 +299,7 @@
             }
         });
     </script>
-    <script>
+    <script type="text/javascript">
         function openNav() {
             document.getElementById("myNav").style.height = "100%";
         }
@@ -310,7 +309,7 @@
         }
     </script>
 
-    <script>
+    <script type="text/javascript">
         var options = [
             {
                 selector: '.introContainer', // Mandatory, CSS selector
@@ -322,7 +321,7 @@
     </script>
     <!-- START Headroom.js -->
 
-    <script>
+    <script type="text/javascript">
         var myElement = document.querySelector("header");
         // construct an instance of Headroom, passing the element
         var headroom = new Headroom(myElement);
@@ -331,7 +330,7 @@
     </script>
     <!-- END Headroom.js -->
 
-    <script>
+    <script type="text/javascript">
         !function () {
             var href = location.href;
             var pgurl = href.substr(href.lastIndexOf('/') + 1);
@@ -342,7 +341,7 @@
 
     <!-- Get the day and display it -->
 
-    <script>
+    <script type="text/javascript">
         var msg = '';
 
         switch (moment().format('dddd')) {
@@ -363,7 +362,7 @@
                 }
             case 'Thursday':
                 {
-                    msg = 'Thirsty Thursday!';
+                    msg = 'Have a rad Thursday!';
                     break;
                 }
             case 'Friday':

@@ -21,15 +21,9 @@
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!-- START Font Preload -->
-
     <link rel="preload" href="/fonts/NeueHaasGroteskDisplayBold.woff2" as="font">
     <link rel="preload" href="/fonts/NeueHaasGroteskText.woff2" as="font">
-
     <!-- END Font Preload -->
-
-
-
-
 
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/loader.css" type="text/css">
@@ -40,19 +34,19 @@
     <link rel="stylesheet" href="css/mobilenav.css" type="text/css">
     <link rel="stylesheet" href="css/components.css" type="text/css">
     <link rel="stylesheet" href="css/clients.css" type="text/css">
-
     <!--endbuild-->
 
+    <!--build:js js/pageload.min.js-->
+    <script src="js/lib/pageload.js"></script>
+    <!--endbuild-->
 
 </head>
 
 <body>
     <!-- Preloader -->
-    <!--
     <div class="loader-body" id="loader">
             <div class="loader"></div>
         </div>
-    -->
     <!-- END Preloader -->
 
     <!-- START SVG Symbols (Hidden on page load)-->
@@ -64,17 +58,19 @@
             </symbol>
         </svg>
     </div>
-    <!-- END SVG Symbols (Hidden on page load)-->
+    <!-- END SVG Symbols -->
 
     <div class="appFrame">
 
         <div class="appBody">
 
-            <!-- Client Images START-->
+            <!-- START Client Images-->
             <div class="background-divs green"></div>
             <div class="background-divs blue"></div>
             <div class="background-divs yellow"></div>
-            <!-- Client Images END-->
+            <!-- End Client Images -->
+
+            <!-- START Background Stripes-->
             <div class="stripes">
                 <div></div>
                 <div></div>
@@ -89,6 +85,7 @@
                 <div></div>
                 <div></div>
             </div>
+            <!-- END Background Stripes-->
 
             <!-- START Mobile Nav + Header-->
             <div id="myNav" class="overlay">
@@ -103,8 +100,11 @@
             </div>
             <!-- END Mobile Nav + Header -->
 
+            <!-- START Page Transition Animation Wrapper -->
             <div class="a-fade">
-        <main id="swup" onload="today()">
+            <!-- END Page Transition Animation Wrapper -->
+
+                <main id="swup"> <!-- SWUP Container is the entirety of the "main" selector. -->
 
                     <header class="headroom headerHero padded-lr fixed">
                         <nav class="headerNav flex h100 ">
@@ -133,10 +133,9 @@
                         <div class="introContainer flex">
                             <div class="introContent">
                                 <h2 class="textCenter white">
-                                    What is a VCR?
+                                    Who am I?
                                 </h2>
-                                <p class="textCenter lightText">
-                                    <span></span>Designer. Web developer. Typography enthusiast.</p>
+                                <p class="textCenter lightText">Designer. Web developer. Typography enthusiast.</p>
                             </div>
                             <div class="scrolldown">
                                 <a href="#scrollingDown">
@@ -154,7 +153,9 @@
 
                     <section id="scrollingDown" class="part1 padded flex">
                         <div class="portfolio content">
-                            <h2 id="whatDay"> </h2>
+                            <div></div>
+                            <!-- JS Show Day and Message -->
+                            <p id="whatDay" class="textCenter lightText">What day is it?</p>
                             <!-- START Clients for Portfolio -->
                             <span class="clientList">
                                 <a class="link clients" data-background="green" href="/about.html">Goat House Records.</a>
@@ -196,11 +197,15 @@
     <script src="js/lib/mobile-chrome-vh-fix.js"></script>
     <!--endbuild-->
 
+    <!--build:js js/moments.min.js-->
+    <script src="js/lib/moments.js"></script>
+    <!--endbuild-->
 
     <!--build:js js/main.min.js-->
     <script src="js/lib/test.js"></script>
     <script src="js/lib/portfolio.js"></script>
     <script src="js/lib/clients.js"></script>
+
     <!--endbuild-->
 
 
@@ -260,14 +265,39 @@
 
                 var vhFix = new VHChromeFix(options);
 
-                function today() {
-                    var day = new Date();
-                    var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
-                        "Thursday", "Friday", "Saturday");
-                    var x = document.getElementById("whatDay");
-                    x.innerHTML = "Enjoy the rest of your " + dayNames[day.getDay()] + ".";
+                var msg = '';
+
+                // START Display day message
+                switch (moment().format('dddd')) {
+                    case 'Monday':
+                        {
+                            msg = 'It\'s Monday!';
+                            break;
+                        }
+                    case 'Tuesday':
+                        {
+                            msg = 'Happy Tuesday!';
+                            break;
+                        }
+                    case 'Wednesday':
+                        {
+                            msg = 'Wacky Wednesday!';
+                            break;
+                        }
+                    case 'Thursday':
+                        {
+                            msg = 'Thirsty Thursday!';
+                            break;
+                        }
+                    case 'Friday':
+                        {
+                            msg = 'Almost Weekend Friday!';
+                            break;
+                        }
                 }
 
+                document.getElementById('whatDay').innerHTML = msg;
+                // END Display day message
             });
         });
 
@@ -339,13 +369,38 @@
     <!-- Get the day and display it -->
 
     <script>
-        function today() {
-            var day = new Date();
-            var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
-                "Thursday", "Friday", "Saturday");
-            var x = document.getElementById("whatDay");
-            x.innerHTML = "Enjoy the rest of your " + dayNames[day.getDay()] + ".";
+        var msg = '';
+
+        switch (moment().format('dddd')) {
+            case 'Monday':
+                {
+                    msg = 'It\'s Monday!';
+                    break;
+                }
+            case 'Tuesday':
+                {
+                    msg = 'Happy Tuesday!';
+                    break;
+                }
+            case 'Wednesday':
+                {
+                    msg = 'Wacky Wednesday!';
+                    break;
+                }
+            case 'Thursday':
+                {
+                    msg = 'Thirsty Thursday!';
+                    break;
+                }
+            case 'Friday':
+                {
+                    msg = 'Almost Weekend Friday!';
+                    break;
+                }
         }
+
+        document.getElementById('whatDay').innerHTML = msg;
+
     </script>
 
 </body>

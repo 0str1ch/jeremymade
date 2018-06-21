@@ -20,28 +20,14 @@
     <meta property="og:image:secure_url" content="https://richpreview.com/richpreview.png" />
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <!--build:js js/jquery.min.js-->
-    <script src="/js/lib/jquery.min.js"></script>
-    <!--endbuild-->
+    <!-- START Font Preload -->
 
-    <!--build:js js/swup.min.js-->
-    <script src="js/lib/swup.min.js"></script>
-    <!--endbuild-->
+    <link rel="preload" href="/fonts/NeueHaasGroteskDisplayBold.woff2" as="font">
+    <link rel="preload" href="/fonts/NeueHaasGroteskText.woff2" as="font">
 
-    <!--build:js js/headroom.min.js-->
-    <script src="js/lib/headroom.js"></script>
-    <!--endbuild-->
-
-    <!--build:js js/mobile-chrome-vh-fix.min.js-->
-    <script src="js/lib/mobile-chrome-vh-fix.js"></script>
-    <!--endbuild-->
+    <!-- END Font Preload -->
 
 
-    <!--build:js js/main.min.js-->
-    <script src="js/lib/test.js"></script>
-    <script src="js/lib/portfolio.js"></script>
-    <script src="js/lib/clients.js"></script>
-    <!--endbuild-->
 
 
 
@@ -89,7 +75,7 @@
             <div class="background-divs blue"></div>
             <div class="background-divs yellow"></div>
             <!-- Client Images END-->
-            <div class="strokes">
+            <div class="stripes">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -118,7 +104,7 @@
             <!-- END Mobile Nav + Header -->
 
             <div class="a-fade">
-                <main id="swup">
+        <main id="swup" onload="today()">
 
                     <header class="headroom headerHero padded-lr fixed">
                         <nav class="headerNav flex h100 ">
@@ -128,7 +114,7 @@
                                 </a>
                             </div>
                             <div class="menu desktopMenu scrollhideNav">
-                                <a href="/about.html" class="navLinks" id="currentPage">About</a>
+                                <a href="/about.html" class="navLinks grow">About</a>
                                 <a href="#" class="navLinks grow">Work</a>
                                 <a href="#" class="navLinks grow">Codebox</a>
                                 <a href="#" class="navLinks grow">Contact</a>
@@ -147,9 +133,10 @@
                         <div class="introContainer flex">
                             <div class="introContent">
                                 <h2 class="textCenter white">
-                                    Jeremy
+                                    What is a VCR?
                                 </h2>
-                                <p class="textCenter lightText">I create imaginative applications that monetize data.</p>
+                                <p class="textCenter lightText">
+                                    <span></span>Designer. Web developer. Typography enthusiast.</p>
                             </div>
                             <div class="scrolldown">
                                 <a href="#scrollingDown">
@@ -167,6 +154,7 @@
 
                     <section id="scrollingDown" class="part1 padded flex">
                         <div class="portfolio content">
+                            <h2 id="whatDay"> </h2>
                             <!-- START Clients for Portfolio -->
                             <span class="clientList">
                                 <a class="link clients" data-background="green" href="/about.html">Goat House Records.</a>
@@ -190,6 +178,30 @@
 
         </div>
     </div>
+
+
+    <!--build:js js/jquery.min.js-->
+    <script src="js/lib/jquery.min.js"></script>
+    <!--endbuild-->
+
+    <!--build:js js/swup.min.js-->
+    <script src="js/lib/swup.min.js"></script>
+    <!--endbuild-->
+
+    <!--build:js js/headroom.min.js-->
+    <script src="js/lib/headroom.js"></script>
+    <!--endbuild-->
+
+    <!--build:js js/mobile-chrome-vh-fix.min.js-->
+    <script src="js/lib/mobile-chrome-vh-fix.js"></script>
+    <!--endbuild-->
+
+
+    <!--build:js js/main.min.js-->
+    <script src="js/lib/test.js"></script>
+    <script src="js/lib/portfolio.js"></script>
+    <script src="js/lib/clients.js"></script>
+    <!--endbuild-->
 
 
     <script>
@@ -237,8 +249,8 @@
                 var headroom = new Headroom(myElement);
                 // initialise
                 headroom.init();
-            
 
+                // Chrome iOS VH buggyfill
                 var options = [
                     {
                         selector: '.introContainer', // Mandatory, CSS selector
@@ -247,6 +259,15 @@
                 ];
 
                 var vhFix = new VHChromeFix(options);
+
+                function today() {
+                    var day = new Date();
+                    var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
+                        "Thursday", "Friday", "Saturday");
+                    var x = document.getElementById("whatDay");
+                    x.innerHTML = "Enjoy the rest of your " + dayNames[day.getDay()] + ".";
+                }
+
             });
         });
 
@@ -314,6 +335,19 @@
             $('a[href="' + pgurl + '"]').addClass('currentPage');
         }();
     </script>
+
+    <!-- Get the day and display it -->
+
+    <script>
+        function today() {
+            var day = new Date();
+            var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
+                "Thursday", "Friday", "Saturday");
+            var x = document.getElementById("whatDay");
+            x.innerHTML = "Enjoy the rest of your " + dayNames[day.getDay()] + ".";
+        }
+    </script>
+
 </body>
 
 </html>

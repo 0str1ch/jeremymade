@@ -125,7 +125,7 @@
                                 <h2 class="textCenter white">
                                     Jeremy Smith
                                 </h2>
-                                <p class="textCenter lightText">Designer. Web developer. Typography enthusiast.</p>
+                                <p id="whatDay" class="textCenter lightText"></p>
                             </div>
                             <div class="scrolldown">
                                 <a href="#scrollingDown">
@@ -143,6 +143,8 @@
 
                     <section id="scrollingDown" class="part1 padded flex">
                         <div class="portfolio content">
+                            <div id="whatDay"></div>
+                            <!-- JS Show Day and Message -->
                             <!-- START Clients for Portfolio -->
                             <span class="clientList">
                                 <a class="link clients" data-background="green" href="/about.html">Goat House Records.</a>
@@ -167,7 +169,7 @@
         </div>
     </div>
 
-    
+
     <script src="js/jquery.min.js"></script>
 
     <script src="js/swup.min.js"></script>
@@ -236,6 +238,39 @@
 
                 var vhFix = new VHChromeFix(options);
 
+                var msg = '';
+
+                // START Display day message
+                switch (moment().format('dddd')) {
+                    case 'Monday':
+                        {
+                            msg = 'It\'s Monday!';
+                            break;
+                        }
+                    case 'Tuesday':
+                        {
+                            msg = 'Happy Tuesday!';
+                            break;
+                        }
+                    case 'Wednesday':
+                        {
+                            msg = 'Wacky Wednesday!';
+                            break;
+                        }
+                    case 'Thursday':
+                        {
+                            msg = 'Thirsty Thursday!';
+                            break;
+                        }
+                    case 'Friday':
+                        {
+                            msg = 'Almost Weekend Friday!';
+                            break;
+                        }
+                }
+
+                document.getElementById('whatDay').innerHTML = msg;
+                // END Display day message
             });
         });
 
@@ -303,6 +338,44 @@
             $('a[href="' + pgurl + '"]').addClass('currentPage');
         }();
     </script>
+
+    <!-- Get the day and display it -->
+
+    <script>
+        var msg = '';
+
+        switch (moment().format('dddd')) {
+            case 'Monday':
+                {
+                    msg = 'It\'s Monday!';
+                    break;
+                }
+            case 'Tuesday':
+                {
+                    msg = 'Happy Tuesday!';
+                    break;
+                }
+            case 'Wednesday':
+                {
+                    msg = 'Wacky Wednesday!';
+                    break;
+                }
+            case 'Thursday':
+                {
+                    msg = 'Thirsty Thursday!';
+                    break;
+                }
+            case 'Friday':
+                {
+                    msg = 'Almost Weekend Friday!';
+                    break;
+                }
+        }
+
+        document.getElementById('whatDay').innerHTML = msg;
+
+    </script>
+
 </body>
 
 </html>

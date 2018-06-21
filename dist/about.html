@@ -20,16 +20,14 @@
     <meta property="og:image:secure_url" content="https://richpreview.com/richpreview.png" />
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <script src="js/jquery.min.js"></script>
+    <!-- START Font Preload -->
 
-    <script src="js/swup.min.js"></script>
+    <link rel="preload" href="/fonts/NeueHaasGroteskDisplayBold.woff2" as="font">
+    <link rel="preload" href="/fonts/NeueHaasGroteskText.woff2" as="font">
 
-    <script src="js/headroom.min.js"></script>
-
-    <script src="js/mobile-chrome-vh-fix.min.js"></script>
+    <!-- END Font Preload -->
 
 
-    <script src="js/main.min.js"></script>
 
 
 
@@ -67,7 +65,7 @@
             <div class="background-divs blue"></div>
             <div class="background-divs yellow"></div>
             <!-- Client Images END-->
-            <div class="strokes">
+            <div class="stripes">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -96,7 +94,7 @@
             <!-- END Mobile Nav + Header -->
 
             <div class="a-fade">
-                <main id="swup">
+        <main id="swup" onload="today()">
 
                     <header class="headroom headerHero padded-lr fixed">
                         <nav class="headerNav flex h100 ">
@@ -106,7 +104,7 @@
                                 </a>
                             </div>
                             <div class="menu desktopMenu scrollhideNav">
-                                <a href="/about.html" class="navLinks" id="currentPage">About</a>
+                                <a href="/about.html" class="navLinks grow">About</a>
                                 <a href="#" class="navLinks grow">Work</a>
                                 <a href="#" class="navLinks grow">Codebox</a>
                                 <a href="#" class="navLinks grow">Contact</a>
@@ -125,9 +123,10 @@
                         <div class="introContainer flex">
                             <div class="introContent">
                                 <h2 class="textCenter white">
-                                    Jeremy
+                                    What is a VCR?
                                 </h2>
-                                <p class="textCenter lightText">I create imaginative applications that monetize data.</p>
+                                <p class="textCenter lightText">
+                                    <span></span>Designer. Web developer. Typography enthusiast.</p>
                             </div>
                             <div class="scrolldown">
                                 <a href="#scrollingDown">
@@ -145,6 +144,7 @@
 
                     <section id="scrollingDown" class="part1 padded flex">
                         <div class="portfolio content">
+                            <h2 id="whatDay"> </h2>
                             <!-- START Clients for Portfolio -->
                             <span class="clientList">
                                 <a class="link clients" data-background="green" href="/about.html">Goat House Records.</a>
@@ -168,6 +168,18 @@
 
         </div>
     </div>
+
+
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/swup.min.js"></script>
+
+    <script src="js/headroom.min.js"></script>
+
+    <script src="js/mobile-chrome-vh-fix.min.js"></script>
+
+
+    <script src="js/main.min.js"></script>
 
 
     <script>
@@ -215,8 +227,8 @@
                 var headroom = new Headroom(myElement);
                 // initialise
                 headroom.init();
-            
 
+                // Chrome iOS VH buggyfill
                 var options = [
                     {
                         selector: '.introContainer', // Mandatory, CSS selector
@@ -225,6 +237,15 @@
                 ];
 
                 var vhFix = new VHChromeFix(options);
+
+                function today() {
+                    var day = new Date();
+                    var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
+                        "Thursday", "Friday", "Saturday");
+                    var x = document.getElementById("whatDay");
+                    x.innerHTML = "Enjoy the rest of your " + dayNames[day.getDay()] + ".";
+                }
+
             });
         });
 
@@ -292,6 +313,19 @@
             $('a[href="' + pgurl + '"]').addClass('currentPage');
         }();
     </script>
+
+    <!-- Get the day and display it -->
+
+    <script>
+        function today() {
+            var day = new Date();
+            var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
+                "Thursday", "Friday", "Saturday");
+            var x = document.getElementById("whatDay");
+            x.innerHTML = "Enjoy the rest of your " + dayNames[day.getDay()] + ".";
+        }
+    </script>
+
 </body>
 
 </html>

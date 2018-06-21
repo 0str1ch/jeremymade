@@ -85,8 +85,8 @@ html {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-font-kerning: auto;
           font-kerning: auto; }
 

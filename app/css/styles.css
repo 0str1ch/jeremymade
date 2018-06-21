@@ -90,17 +90,6 @@ html {
   -webkit-font-kerning: auto;
           font-kerning: auto; }
 
-blockquote,
-q {
-  quotes: none; }
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: "";
-  content: none; }
-
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -364,13 +353,10 @@ html.is-animating .a-fade {
   -webkit-box-flex: 1;
           flex: 1 1 auto; }
 
-/* -------------------------------- 
-
-Strokes
-
--------------------------------- */
-.strokes,
-.cd-project .strokes-p {
+/*
+* === Background Stripes ===
+*/
+.stripes {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -380,57 +366,41 @@ Strokes
   right: 0;
   bottom: 0; }
 
-.strokes div,
-.cd-project .strokes-p div {
+.stripes div {
   height: 100%;
   width: calc(8.33333333% - 0.5px);
   z-index: 0;
   float: left; }
 
-.strokes div:nth-of-type(2),
-.cd-project .strokes-p div:nth-of-type(2),
-.strokes div:nth-of-type(4),
-.cd-project .strokes-p div:nth-of-type(4),
-.strokes div:nth-of-type(6),
-.cd-project .strokes-p div:nth-of-type(6),
-.strokes div:nth-of-type(8),
-.cd-project .strokes-p div:nth-of-type(8),
-.strokes div:nth-of-type(10),
-.cd-project .strokes-p div:nth-of-type(10) {
+.stripes div:nth-of-type(2),
+.stripes div:nth-of-type(4),
+.stripes div:nth-of-type(6),
+.stripes div:nth-of-type(8),
+.stripes div:nth-of-type(10) {
   border-right: 1px solid rgba(255, 255, 255, 0.09); }
 
 @media (max-width: 1090px) {
-  .strokes,
-  .cd-project .strokes-p {
+  .stripes {
     width: 80%;
     margin: 0px 10%; }
-  .strokes div:nth-of-type(1),
-  .cd-project .strokes-p div:nth-of-type(1),
-  .strokes div:nth-of-type(2),
-  .cd-project .strokes-p div:nth-of-type(2),
-  .strokes div:nth-of-type(3),
-  .cd-project .strokes-p div:nth-of-type(3),
-  .strokes div:nth-of-type(4),
-  .cd-project .strokes-p div:nth-of-type(4) {
+  .stripes div:nth-of-type(1),
+  .stripes div:nth-of-type(2),
+  .stripes div:nth-of-type(3),
+  .stripes div:nth-of-type(4) {
     display: none; }
-  .strokes div,
-  .cd-project .strokes-p div {
+  .stripes div {
     width: calc(12.5% - 0.8px); }
-  .strokes div:nth-of-type(5),
-  .cd-project .strokes-p div:nth-of-type(5) {
+  .stripes div:nth-of-type(5) {
     border-left: 1px solid rgba(255, 255, 255, 0.09); }
-  .strokes div:nth-of-type(12),
-  .cd-project .strokes-p div:nth-of-type(12) {
+  .stripes div:nth-of-type(12) {
     border-right: 1px solid rgba(255, 255, 255, 0.09); } }
 
 @media (max-width: 890px) {
-  .strokes,
-  .cd-project .strokes-p {
+  .stripes {
     width: calc(100% - 80px);
     margin: 0px 40px; } }
 
 @media (max-width: 600px) {
-  .strokes,
-  .cd-project .strokes-p {
+  .stripes {
     width: calc(100% - 40px);
     margin: 0px 20px; } }

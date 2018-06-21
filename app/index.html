@@ -21,15 +21,9 @@
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!-- START Font Preload -->
-
     <link rel="preload" href="/fonts/NeueHaasGroteskDisplayBold.woff2" as="font">
     <link rel="preload" href="/fonts/NeueHaasGroteskText.woff2" as="font">
-
     <!-- END Font Preload -->
-
-
-
-
 
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/loader.css" type="text/css">
@@ -50,11 +44,9 @@
 
 <body>
     <!-- Preloader -->
-    
     <div class="loader-body" id="loader">
             <div class="loader"></div>
         </div>
-    
     <!-- END Preloader -->
 
     <!-- START SVG Symbols (Hidden on page load)-->
@@ -66,17 +58,19 @@
             </symbol>
         </svg>
     </div>
-    <!-- END SVG Symbols (Hidden on page load)-->
+    <!-- END SVG Symbols -->
 
     <div class="appFrame">
 
         <div class="appBody">
 
-            <!-- Client Images START-->
+            <!-- START Client Images-->
             <div class="background-divs green"></div>
             <div class="background-divs blue"></div>
             <div class="background-divs yellow"></div>
-            <!-- Client Images END-->
+            <!-- End Client Images -->
+
+            <!-- START Background Stripes-->
             <div class="stripes">
                 <div></div>
                 <div></div>
@@ -91,6 +85,7 @@
                 <div></div>
                 <div></div>
             </div>
+            <!-- END Background Stripes-->
 
             <!-- START Mobile Nav + Header-->
             <div id="myNav" class="overlay">
@@ -105,8 +100,11 @@
             </div>
             <!-- END Mobile Nav + Header -->
 
+            <!-- START Page Transition Animation Wrapper -->
             <div class="a-fade">
-                <main id="swup">
+            <!-- END Page Transition Animation Wrapper -->
+
+                <main id="swup"> <!-- SWUP Container is the entirety of the "main" selector. -->
 
                     <header class="headroom headerHero padded-lr fixed">
                         <nav class="headerNav flex h100 ">

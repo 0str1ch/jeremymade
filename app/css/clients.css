@@ -33,9 +33,10 @@
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
-.background-divs.blue {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ab2eff), to(#ac2eff)), url(../images/int2.jpg);
-  background-image: linear-gradient(#ab2eff, #ac2eff), url(../images/int2.jpg);
+.background-divs.ghr {
+  background-color: rgba(0, 0, 0, 0.41);
+  background-image: url(../images/da-band.jpg);
+  background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat; }
 

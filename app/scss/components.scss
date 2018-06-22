@@ -333,14 +333,14 @@ main .mainContent {
 
 .scrollhideTitle {
   transform: translate3d(0, 0, 0);
-  transition: opacity 0.8s cubic-bezier(0.19, 1, 0.22, 0.8);
-  transition-delay: 0.15s;
+  transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 0.8);
+  transition-delay: 0.1s;
 }
 
 .scrollhideText {
   transform: translate3d(0, 0, 0);
-  transition: opacity 0.8s cubic-bezier(0.19, 1, 0.22, 0.8);
-  transition-delay: 0.3s;
+  transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 0.8);
+  transition-delay: 0.15s;
 }
 
 /*

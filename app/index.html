@@ -60,7 +60,7 @@
         <div class="appBody">
 
             <!-- START Client Images-->
-            <div class="background-divs green"></div>
+            <div class="background-divs ghr"></div>
             <div class="background-divs blue"></div>
             <div class="background-divs yellow"></div>
             <!-- End Client Images -->
@@ -149,11 +149,10 @@
 
                     <section id="scrollingDown" class="part1 padded flex">
                         <div class="portfolio content">
-                            <div></div>
-
+                            <h4 class="lightText">Clients I've worked with</h4>
                             <!-- START Clients for Portfolio -->
                             <span class="clientList">
-                                <a class="link clients" data-background="green" href="/about">Goat House Records.</a>
+                                <a class="link clients" data-background="ghr" href="/about">Goat House Records.</a>
                                 <a class="link clients" data-background="green" href="/about">Cross NY.</a>
                                 <a class="link clients" data-background="blue" href="/about">Moon's Bridge.</a>
                                 <a class="link clients" data-background="yellow" href="/about">Nicky K.</a>
@@ -281,6 +280,7 @@
         });
 
     </script>
+
     <script type="text/javascript">
         $(window).scroll(function () {
             if ($(window).scrollTop() >= 100) {
@@ -305,6 +305,33 @@
             }
         });
     </script>
+    <!--
+<script type="text/javascript">
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 100) {
+            $(".scrolldown").css("opacity", "0");
+        } else {
+            $(".scrolldown").css("opacity", "1");
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 250) {
+            $(".scrollhideTitle").css("opacity", "0");
+        } else {
+            $(".scrollhideTitle").css("opacity", "1");
+        }
+    });
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 250) {
+            $(".scrollhideText").css("opacity", "0");
+        } else {
+            $(".scrollhideText").css("opacity", "1");
+        }
+    });
+</script>
+-->
+
     <script type="text/javascript">
         function openNav() {
             document.getElementById("myNav").style.height = "100%";

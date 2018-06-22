@@ -275,16 +275,16 @@ main .mainContent {
   color: var(--introText); }
 
 .scrollhideTitle {
-  -webkit-transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s; }
+  -webkit-transition: 1.2s cubic-bezier(0.19, 1, 0.22, 0.8);
+  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 0.8);
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s; }
 
 .scrollhideText {
-  -webkit-transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s; }
+  -webkit-transition: 1.2s cubic-bezier(0.19, 1, 0.22, 0.8);
+  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 0.8);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s; }
 
 /*
 * === <pre> and <code> styles ===

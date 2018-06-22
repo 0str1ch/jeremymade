@@ -116,7 +116,6 @@ gulp.task('minify', function() {
   return gulp.src('dist/*.html')
     .pipe(htmlmin({collapseWhitespace: true,
       removeComments: true,
-      collapseWhitespace: true,
       collapseBooleanAttributes: true,
       removeAttributeQuotes: true,
       removeRedundantAttributes: true,
@@ -125,7 +124,6 @@ gulp.task('minify', function() {
       removeStyleLinkTypeAttributes: true,
       removeOptionalTags: true,
     minifyCSS: true,
-    minifyJS: true,
     removeComments: true
   }))
     .pipe(gulp.dest('dist'));

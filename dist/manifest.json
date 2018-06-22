@@ -1,0 +1,16 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "jsmith",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://jeremymade.com/",
+    "short_name": "jsmith",
+    "theme_color": "#2a2a2a",
+    "description": "Your friendly neighborhood web designer.",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": []
+}

@@ -1,186 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/WebPage">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="canonical" href="https://jeremymade.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="jsmith">
-    <meta name="apple-mobile-web-app-title" content="jsmith">
-    <meta name="theme-color" content="#2a2a2a">
-    <meta name="msapplication-navbutton-color" content="#2a2a2a">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-starturl" content="/">
-    <title>Jeremy Smith</title>
-    <meta name="description" content="Your friendly neighborhood web designer." />
-    <meta property="og:title" content="Jeremy Smith" />
-    <meta property="og:description" content="Your friendly neighborhood web designer." />
-    <meta property="og:image:secure_url" content="https://richpreview.com/richpreview.png" />
-    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-    <!-- START Font Preload -->
-    <link rel="preload" href="/fonts/NeueHaasGroteskDisplayBold.woff2" as="font">
-    <link rel="preload" href="/fonts/NeueHaasGroteskText.woff2" as="font">
-    <!-- END Font Preload -->
-
-    <link rel="stylesheet" href="css/styles.min.css">
-
-
-
-</head>
-
-<body>
-    <!-- Preloader -->
-    <!-- END Preloader -->
-
-    <!-- START SVG Symbols (Hidden on page load)-->
-    <div style="display: none;">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <symbol viewBox="0 0 32 32" id=arrow-down-long xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.32 2v23.84l-4.88-4.96c-.64-.64-1.76-.64-2.4 0-.32.32-.48.72-.48 1.2s.16.88.48 1.2l7.84 7.84c.08.08.16.16.32.24.08.08.16.08.24.16h.08c.08 0 .16.08.24.08.24.08.48.08.64 0 .08 0 .16 0 .24-.08h.08c.08 0 .16-.08.24-.08l.08-.08.24-.24 7.84-7.84c.32-.32.48-.72.48-1.2s-.16-.88-.48-1.2c-.32-.32-.72-.48-1.2-.48s-.88.16-1.2.48l-4.88 4.96V2c0-.96-.8-1.68-1.68-1.68-1.12 0-1.84.72-1.84 1.68z"
-                />
-            </symbol>
-        </svg>
-    </div>
-    <!-- END SVG Symbols -->
-
-    <div class="appFrame">
-
-        <div class="appBody">
-
-            <!-- START Client Images-->
-            <div class="background-divs green"></div>
-            <div class="background-divs blue"></div>
-            <div class="background-divs yellow"></div>
-            <!-- End Client Images -->
-
-            <!-- START Background Stripes-->
-            <div class="stripes">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <!-- END Background Stripes-->
-
-            <!-- START Mobile Nav + Header-->
-            <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="overlay-content">
-                    <a href="/" onclick="closeNav()">Home</a>
-                    <a href="/about.html" onclick="closeNav()">About</a>
-                    <a href="/" onclick="closeNav()">Work</a>
-                    <a href="/about.html" onclick="closeNav()">Codebox</a>
-                    <a href="/about.html" onclick="closeNav()">Contact</a>
-                </div>
-            </div>
-            <!-- END Mobile Nav + Header -->
-
-            <!-- START Page Transition Animation Wrapper -->
-            <div class="a-fade">
-                <!-- END Page Transition Animation Wrapper -->
-
-                <main id="swup">
-                    <!-- SWUP Container is the entirety of the "main" selector. -->
-
-                    <header class="headroom headerHero padded-lr fixed">
-                        <nav class="headerNav flex h100 ">
-                            <div class="logo">
-                                <a href="/">
-                                    <img class="profilePhoto" src="images/me-bw.jpg">
-                                </a>
-                            </div>
-                            <div class="menu desktopMenu scrollhideNav">
-                                <a href="/about.html" class="navLinks grow">About</a>
-                                <a href="#" class="navLinks grow">Work</a>
-                                <a href="#" class="navLinks grow">Codebox</a>
-                                <a href="#" class="navLinks grow">Contact</a>
-                            </div>
-                            <span class="burgerContainer mobileMenu" onclick="openNav()">&#9776; open</span>
-                        </nav>
-                    </header>
-
-
-
-
-
-
-
-                    <section class="introWrapper padded-lr">
-                        <div class="introContainer flex">
-                            <div class="introContent">
-                                <h2 class="textCenter white">
-                                    Nice to meet you.
-                                </h2>
-                                <p class="textCenter lightText">Designer. Web developer. Typography enthusiast.</p>
-                            </div>
-                            <div class="scrolldown">
-                                <a href="#scrollingDown">
-                                    <span>
-                                        Scroll
-                                        <svg class="scrollArrow ArrowLink-icon" aria-hidden="true">
-                                            <use xlink:href="#arrow-down-long"></use>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                    </section>
-
-                    <section id="scrollingDown" class="part1 padded flex">
-                        <div class="portfolio content">
-                            <div></div>
-
-                            <!-- START Clients for Portfolio -->
-                            <span class="clientList">
-                                <a class="link clients" data-background="green" href="/about.html">Goat House Records.</a>
-                                <a class="link clients" data-background="green" href="/about.html">Cross NY.</a>
-                                <a class="link clients" data-background="blue" href="/about.html">Moon's Bridge.</a>
-                                <a class="link clients" data-background="yellow" href="/about.html">Nicky K.</a>
-                                <a class="link clients" data-background="yellow" href="/about.html">Fix'd.</a>
-                                <a class="link clients" data-background="yellow" href="/about.html">DPI Creative.</a>
-                                <a class="link clients" data-background="yellow" href="/about.html">PalmTees Printing.</a>
-                                <a class="link clients" data-background="yellow" href="/about.html">Smithed.</a>
-                                <a class="link clients" data-background="yellow" href="/about.html">EWC Controls.</a>
-                                <a class="link clients" data-background="yellow" href="/about.html">Sunshine State Swimwear.</a>
-                                <a class="link clients" data-background="yellow" href="https://smithed.xyz">Etc.</a>
-                            </span>
-                            <!-- END Clients for Portfolio -->
-                            <!-- JS Show Day and Message -->
-                            <h2 id="whatDay" class="lightText">What day is it?</h2>
-                        </div>
-                    </section>
-
-                </main>
-            </div>
-
-        </div>
-    </div>
-
-
-    <script src="js/main.min.js"></script>
-
-
-    <script type="text/javascript">
-        var options = {
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/WebPage"><head><meta charset="UTF-8"><link rel="canonical" href="https://jeremymade.com"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="application-name" content="jsmith"><meta name="apple-mobile-web-app-title" content="jsmith"><meta name="theme-color" content="#2a2a2a"><meta name="msapplication-navbutton-color" content="#2a2a2a"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="msapplication-starturl" content="/"><title>Jeremy Smith</title><meta name="description" content="Your friendly neighborhood web designer."><meta property="og:title" content="Jeremy Smith"><meta property="og:description" content="Your friendly neighborhood web designer."><meta property="og:image:secure_url" content="https://richpreview.com/richpreview.png"><link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"><!-- START Font Preload --><link rel="preload" href="/fonts/NeueHaasGroteskDisplayBold.woff2" as="font"><link rel="preload" href="/fonts/NeueHaasGroteskText.woff2" as="font"><!-- END Font Preload --><link rel="stylesheet" href="css/styles.min.css"></head><body><!-- Preloader --><!-- END Preloader --><!-- START SVG Symbols (Hidden on page load)--><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="arrow-down-long" xmlns="http://www.w3.org/2000/svg"><path d="M14.32 2v23.84l-4.88-4.96c-.64-.64-1.76-.64-2.4 0-.32.32-.48.72-.48 1.2s.16.88.48 1.2l7.84 7.84c.08.08.16.16.32.24.08.08.16.08.24.16h.08c.08 0 .16.08.24.08.24.08.48.08.64 0 .08 0 .16 0 .24-.08h.08c.08 0 .16-.08.24-.08l.08-.08.24-.24 7.84-7.84c.32-.32.48-.72.48-1.2s-.16-.88-.48-1.2c-.32-.32-.72-.48-1.2-.48s-.88.16-1.2.48l-4.88 4.96V2c0-.96-.8-1.68-1.68-1.68-1.12 0-1.84.72-1.84 1.68z"/></symbol></svg></div><!-- END SVG Symbols --><div class="appFrame"><div class="appBody"><!-- START Client Images--><div class="background-divs green"></div><div class="background-divs blue"></div><div class="background-divs yellow"></div><!-- End Client Images --><!-- START Background Stripes--><div class="stripes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><!-- END Background Stripes--><!-- START Mobile Nav + Header--><div id="myNav" class="overlay"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><div class="overlay-content"><a href="/" onclick="closeNav()">Home</a> <a href="/about.html" onclick="closeNav()">About</a> <a href="/" onclick="closeNav()">Work</a> <a href="/about.html" onclick="closeNav()">Codebox</a> <a href="/about.html" onclick="closeNav()">Contact</a></div></div><!-- END Mobile Nav + Header --><!-- START Page Transition Animation Wrapper --><div class="a-fade"><!-- END Page Transition Animation Wrapper --><main id="swup"><!-- SWUP Container is the entirety of the "main" selector. --><header class="headroom headerHero padded-lr fixed"><nav class="headerNav flex h100"><div class="logo"><a href="/"><img class="profilePhoto" src="images/me-bw.jpg"></a></div><div class="menu desktopMenu scrollhideNav"><a href="/about.html" class="navLinks grow">About</a> <a href="#" class="navLinks grow">Work</a> <a href="#" class="navLinks grow">Codebox</a> <a href="#" class="navLinks grow">Contact</a></div><span class="burgerContainer mobileMenu" onclick="openNav()">&#9776; open</span></nav></header><section class="introWrapper padded-lr"><div class="introContainer flex"><div class="introContent"><h2 class="textCenter white">Nice to meet you.</h2><p class="textCenter lightText">Designer. Web developer. Typography enthusiast.</p></div><div class="scrolldown"><a href="#scrollingDown"><span>Scroll <svg class="scrollArrow ArrowLink-icon" aria-hidden="true"><use xlink:href="#arrow-down-long"></use></svg></span></a></div></div></section><section id="scrollingDown" class="part1 padded flex"><div class="portfolio content"><div></div><!-- START Clients for Portfolio --> <span class="clientList"><a class="link clients" data-background="green" href="/about.html">Goat House Records.</a> <a class="link clients" data-background="green" href="/about.html">Cross NY.</a> <a class="link clients" data-background="blue" href="/about.html">Moon's Bridge.</a> <a class="link clients" data-background="yellow" href="/about.html">Nicky K.</a> <a class="link clients" data-background="yellow" href="/about.html">Fix'd.</a> <a class="link clients" data-background="yellow" href="/about.html">DPI Creative.</a> <a class="link clients" data-background="yellow" href="/about.html">PalmTees Printing.</a> <a class="link clients" data-background="yellow" href="/about.html">Smithed.</a> <a class="link clients" data-background="yellow" href="/about.html">EWC Controls.</a> <a class="link clients" data-background="yellow" href="/about.html">Sunshine State Swimwear.</a> <a class="link clients" data-background="yellow" href="https://smithed.xyz">Etc.</a> </span><!-- END Clients for Portfolio --><!-- JS Show Day and Message --><h2 id="whatDay" class="lightText">What day is it?</h2></div></section></main></div></div></div><script src="js/main.min.js"></script><script type="text/javascript">var options = {
             cache: false,
             debugMode: true
         }
-        var swup = new Swup(options)
-    </script>
-    <script type="text/javascript">
-        $(".link").mouseenter(function (e) {
+        var swup = new Swup(options)</script><script type="text/javascript">$(".link").mouseenter(function (e) {
             e.preventDefault();
             var client = $(this).attr("data-background");
 
@@ -262,11 +84,7 @@
                 document.getElementById('whatDay').innerHTML = msg;
                 // END Display day message
             });
-        });
-
-    </script>
-    <script type="text/javascript">
-        $(window).scroll(function () {
+        });</script><script type="text/javascript">$(window).scroll(function () {
             if ($(window).scrollTop() >= 100) {
                 $(".scrolldown").css("opacity", "0");
             } else {
@@ -287,52 +105,29 @@
             } else {
                 $(".scrollhideText").css("opacity", "1");
             }
-        });
-    </script>
-    <script type="text/javascript">
-        function openNav() {
+        });</script><script type="text/javascript">function openNav() {
             document.getElementById("myNav").style.height = "100%";
         }
 
         function closeNav() {
             document.getElementById("myNav").style.height = "0%";
-        }
-    </script>
-
-    <script type="text/javascript">
-        var options = [
+        }</script><script type="text/javascript">var options = [
             {
                 selector: '.introContainer', // Mandatory, CSS selector
                 vh: 100,  // Mandatory, height in vh units
             }
         ];
 
-        var vhFix = new VHChromeFix(options);
-    </script>
-    <!-- START Headroom.js -->
-
-    <script type="text/javascript">
-        var myElement = document.querySelector("header");
+        var vhFix = new VHChromeFix(options);</script><!-- START Headroom.js --><script type="text/javascript">var myElement = document.querySelector("header");
         // construct an instance of Headroom, passing the element
         var headroom = new Headroom(myElement);
         // initialise
-        headroom.init(); 
-    </script>
-    <!-- END Headroom.js -->
-
-    <script type="text/javascript">
-        !function () {
+        headroom.init();</script><!-- END Headroom.js --><script type="text/javascript">!function () {
             var href = location.href;
             var pgurl = href.substr(href.lastIndexOf('/') + 1);
             // match all the anchors on the page with the html file name
             $('a[href="' + pgurl + '"]').addClass('currentPage');
-        }();
-    </script>
-
-    <!-- Get the day and display it -->
-
-    <script type="text/javascript">
-        var msg = '';
+        }();</script><!-- Get the day and display it --><script type="text/javascript">var msg = '';
 
         switch (moment().format('dddd')) {
             case 'Monday':
@@ -362,10 +157,4 @@
                 }
         }
 
-        document.getElementById('whatDay').innerHTML = msg;
-
-    </script>
-
-</body>
-
-</html>
+        document.getElementById('whatDay').innerHTML = msg;</script></body></html>

@@ -112,6 +112,12 @@ gulp.task("link-dependencies", function() {
   return depLinker.linkDependenciesTo("dist/js");
 });
 
+gulp.task('minify', function() {
+  return gulp.src('dist/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
+
 // Build Sequences
 // ---------------
 
@@ -124,6 +130,8 @@ gulp.task("build", function(callback) {
     "clean:dist",
     "sass",
     ["useref", "images", "fonts"],
+    "minify",
     callback
   );
 });
+

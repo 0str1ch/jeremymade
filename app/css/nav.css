@@ -66,6 +66,8 @@
 
 #currentPage {
   color: #fff;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transform: scale(1.2);
           transform: scale(1.2); }
 
@@ -103,8 +105,10 @@
   /* bottom: 2em; */
   top: 82vh;
   left: -3em;
-  -webkit-transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1);
   width: 100%; }
 
 @media only screen and (max-width: 641px) {

@@ -382,7 +382,8 @@ html.is-animating .a-fade {
 */
 
 .a-fade {
-  transition: 0.2s;
+  transform: translate3d(0, 0, 0);
+  transition: 0.2s ease-in-out;
   opacity: 1;
 }
 html.is-animating .a-fade {

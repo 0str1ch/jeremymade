@@ -370,10 +370,19 @@ main ol li:before {
 
 /*
 * === SWUP Animations ===
-*/
 
 .a-fade {
   transition: 0.4s;
+  opacity: 1;
+}
+html.is-animating .a-fade {
+  opacity: 0;
+}
+
+*/
+
+.a-fade {
+  transition: 0.2s;
   opacity: 1;
 }
 html.is-animating .a-fade {

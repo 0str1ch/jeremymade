@@ -105,7 +105,7 @@ gulp.task("clean", function() {
 });
 
 gulp.task("clean:dist", function() {
-  return del.sync(["dist/**/*", "!dist/images", "!dist/images/**/*"]);
+  return del.sync(["dist/**/*", "!dist/manifest.json", "!dist/*.js", "!dist/images", "!dist/images/**/*"]);
 });
 
 gulp.task("link-dependencies", function() {

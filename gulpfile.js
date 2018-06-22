@@ -116,15 +116,7 @@ gulp.task('minify', function() {
   return gulp.src('dist/*.html')
     .pipe(htmlmin({collapseWhitespace: true,
       removeComments: true,
-      collapseBooleanAttributes: true,
-      removeAttributeQuotes: true,
-      removeRedundantAttributes: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true,
-      removeOptionalTags: true,
-    minifyCSS: true,
-    removeComments: true
+    minifyCSS: true
   }))
     .pipe(gulp.dest('dist'));
 });

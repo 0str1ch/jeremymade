@@ -22,7 +22,7 @@
 .clientList span:hover {
   color: #fff; }
 
-.background-divs {
+/*.background-divs {
   z-index: -99999;
   width: 100vw;
   height: 100vh;
@@ -34,7 +34,23 @@
   left: 0;
   visibility: visible;
   -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}*/
+.background-divs {
+  z-index: -99999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease; }
 
 .background-divs.ghr {
   background-color: rgba(0, 0, 0, 0.41);

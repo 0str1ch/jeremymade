@@ -59,7 +59,11 @@
 
         <div class="appBody">
 
-            <!-- START Client Images-->
+            <!-- START Client Images -->
+
+            <div class="background-divs ghr"></div>
+            <div class="background-divs nk"></div>
+            <div class="background-divs sss"></div>
 
             <!-- End Client Images -->
 
@@ -100,9 +104,6 @@
                 <main id="swup">
                     <!-- SWUP Container is the entirety of the "main" selector. -->
 
-                    <div class="background-divs ghr"></div>
-                    <div class="background-divs nk"></div>
-                    <div class="background-divs sss"></div>
 
                     <header class="headroom headerHero padded-lr absolute">
                         <nav class="headerNav flex h100 ">
@@ -131,7 +132,7 @@
                         <div class="introContainer flex">
                             <div class="introContent">
                                 <h2 class="textCenter white scrollhideTitle">
-                                    Who am I?
+                                    What's my name?
                                 </h2>
                                 <p class="textCenter lightText scrollhideText">Designer. Web developer. Typography enthusiast.</p>
                             </div>
@@ -149,15 +150,15 @@
 
                     </section>
 
-                    <section id="scrollingDown" class="part1 padded flex">
+                    <section id="scrollingDown" class="part1 padded flex relative">
                         <div class="portfolio content">
                             <h4 class="lightText">Clients I've worked with</h4>
                             <!-- START Clients for Portfolio -->
                             <span class="clientList mb">
-                                <a class="link clients" data-background="ghr" href="/about">Goat House Records.</a>
+                                <a class="link clients" data-background="ghr" href="/about.html">Goat House Records.</a>
                                 <a class="link clients" data-background="cross">Cross NY.</a>
                                 <a data-no-swup class="link clients">Moon's Bridge.</a>
-                                <a class="link clients" data-background="nk" href="/about">Nicky K.</a>
+                                <a class="link clients" data-background="nk" href="/about.html">Nicky K.</a>
                                 <a class="link clients">Fix'd.</a>
                                 <a class="link clients">DPI Creative.</a>
                                 <a class="link clients" data-background="palmtees" href="/about">PalmTees Printing.</a>
@@ -165,6 +166,8 @@
                                 <a class="link clients" data-background="sss" href="/about">Sunshine State Swimwear.</a>
                             </span>
                             <!-- END Clients for Portfolio -->
+
+
                             <!-- JS Show Day and Message -->
                             <h2 id="whatDay" class="white">What day is it?</h2>
                         </div>
@@ -224,6 +227,13 @@
             $(".background-divs").removeClass("active");
         });
 
+        $(".link").click(function (e) {
+            e.preventDefault();
+            var client = $(this).attr("data-background");
+
+            $(".background-divs").removeClass("active");
+        });
+
         // load scripts for replaced elements
         document.addEventListener("swup:contentReplaced", event => {
             swup.options.elements.forEach(selector => {
@@ -236,6 +246,13 @@
                 });
 
                 $(".link").mouseleave(function (e) {
+                    e.preventDefault();
+                    var client = $(this).attr("data-background");
+
+                    $(".background-divs").removeClass("active");
+                });
+
+                $(".link").click(function (e) {
                     e.preventDefault();
                     var client = $(this).attr("data-background");
 

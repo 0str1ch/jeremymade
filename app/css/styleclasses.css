@@ -4,6 +4,9 @@
 .absolute {
   position: absolute; }
 
+.relative {
+  position: relative; }
+
 .white {
   color: #fff; }
 

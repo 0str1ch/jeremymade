@@ -67,7 +67,7 @@
 .background-divs.nk,
 .background-divs.ghr,
 .background-divs.sss {
-  background-color: rgba(0, 0, 0, 0.71) !important;
+  background-color: rgba(0, 0, 0, 0.61) !important;
   background-blend-mode: multiply;
 }
 
@@ -78,14 +78,12 @@
 }*/
 
 .background-divs.ghr {
-  background-color: rgba(0, 0, 0, 0.71);
   @include retina(
     "https://cdn.jeremymade.com/images/da-band.jpg",
     3,
     cover,
     center center no-repeat
   );
-  background-blend-mode: multiply;
 }
 
 .background-divs.nk {

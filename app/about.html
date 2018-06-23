@@ -60,9 +60,7 @@
         <div class="appBody">
 
             <!-- START Client Images-->
-            <div class="background-divs green"></div>
-            <div class="background-divs blue"></div>
-            <div class="background-divs yellow"></div>
+
             <!-- End Client Images -->
 
             <!-- START Background Stripes-->
@@ -102,7 +100,11 @@
                 <main id="swup">
                     <!-- SWUP Container is the entirety of the "main" selector. -->
 
-                    <header class="headroom headerHero padded-lr fixed">
+                    <div class="background-divs ghr"></div>
+                    <div class="background-divs nk"></div>
+                    <div class="background-divs sss"></div>
+
+                    <header class="headroom headerHero padded-lr absolute">
                         <nav class="headerNav flex h100 ">
                             <div class="logo">
                                 <a href="/">
@@ -129,7 +131,7 @@
                         <div class="introContainer flex">
                             <div class="introContent">
                                 <h2 class="textCenter white scrollhideTitle">
-                                    Nice to meet ya.
+                                    Who am I?
                                 </h2>
                                 <p class="textCenter lightText scrollhideText">Designer. Web developer. Typography enthusiast.</p>
                             </div>
@@ -149,21 +151,18 @@
 
                     <section id="scrollingDown" class="part1 padded flex">
                         <div class="portfolio content">
-                            <div></div>
-
+                            <h4 class="lightText">Clients I've worked with</h4>
                             <!-- START Clients for Portfolio -->
-                            <span class="clientList">
-                                <a class="link clients" data-background="green" href="/about">Goat House Records.</a>
-                                <a class="link clients" data-background="green" href="/about">Cross NY.</a>
-                                <a class="link clients" data-background="blue" href="/about">Moon's Bridge.</a>
-                                <a class="link clients" data-background="yellow" href="/about">Nicky K.</a>
-                                <a class="link clients" data-background="yellow" href="/about">Fix'd.</a>
-                                <a class="link clients" data-background="yellow" href="/about">DPI Creative.</a>
-                                <a class="link clients" data-background="yellow" href="/about">PalmTees Printing.</a>
-                                <a class="link clients" data-background="yellow" href="/about">Smithed.</a>
-                                <a class="link clients" data-background="yellow" href="/about">EWC Controls.</a>
-                                <a class="link clients" data-background="yellow" href="/about">Sunshine State Swimwear.</a>
-                                <a class="link clients" data-background="yellow" href="https://smithed.xyz">Etc.</a>
+                            <span class="clientList mb">
+                                <a class="link clients" data-background="ghr" href="/about">Goat House Records.</a>
+                                <a class="link clients" data-background="cross">Cross NY.</a>
+                                <a data-no-swup class="link clients">Moon's Bridge.</a>
+                                <a class="link clients" data-background="nk" href="/about">Nicky K.</a>
+                                <a class="link clients">Fix'd.</a>
+                                <a class="link clients">DPI Creative.</a>
+                                <a class="link clients" data-background="palmtees" href="/about">PalmTees Printing.</a>
+                                <a class="link clients" data-background="ewc" href="/about">EWC Controls.</a>
+                                <a class="link clients" data-background="sss" href="/about">Sunshine State Swimwear.</a>
                             </span>
                             <!-- END Clients for Portfolio -->
                             <!-- JS Show Day and Message -->
@@ -210,6 +209,21 @@
             $(".background-divs").removeClass("active");
         });
 
+        $(".nolink").mouseenter(function (e) {
+            e.preventDefault();
+            var client = $(this).attr("data-background");
+
+            $(".background-divs").removeClass("active");
+            $(".background-divs." + client).addClass("active");
+        });
+
+        $(".nolink").mouseleave(function (e) {
+            e.preventDefault();
+            var client = $(this).attr("data-background");
+
+            $(".background-divs").removeClass("active");
+        });
+
         // load scripts for replaced elements
         document.addEventListener("swup:contentReplaced", event => {
             swup.options.elements.forEach(selector => {
@@ -238,6 +252,10 @@
                     {
                         selector: '.introContainer', // Mandatory, CSS selector
                         vh: 100,  // Mandatory, height in vh units
+                    },
+                    {
+                        selector: '.headroom', // Mandatory, CSS selector
+                        vh: 10,  // Mandatory, height in vh units
                     }
                 ];
 
@@ -269,18 +287,28 @@
                         }
                     case 'Friday':
                         {
-                            msg = 'Have a great weekend.';
+                            msg = 'Have a great weekend! 🙌';
+                            break;
+                        }
+                    case 'Saturday':
+                        {
+                            msg = 'Have a great Saturday!';
+                            break;
+                        }
+                    case 'Sunday':
+                        {
+                            msg = 'Enjoy that Sunday brunch!';
                             break;
                         }
                 }
 
                 document.getElementById('whatDay').innerHTML = msg;
-                // END Display day message
 
             });
         });
 
     </script>
+
     <script type="text/javascript">
         $(window).scroll(function () {
             if ($(window).scrollTop() >= 100) {
@@ -305,6 +333,33 @@
             }
         });
     </script>
+    <!--
+<script type="text/javascript">
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 100) {
+            $(".scrolldown").css("opacity", "0");
+        } else {
+            $(".scrolldown").css("opacity", "1");
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 250) {
+            $(".scrollhideTitle").css("opacity", "0");
+        } else {
+            $(".scrollhideTitle").css("opacity", "1");
+        }
+    });
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 250) {
+            $(".scrollhideText").css("opacity", "0");
+        } else {
+            $(".scrollhideText").css("opacity", "1");
+        }
+    });
+</script>
+-->
+
     <script type="text/javascript">
         function openNav() {
             document.getElementById("myNav").style.height = "100%";
@@ -346,8 +401,7 @@
     </script>
 
     <!-- Get the day and display it -->
-
-    <script type="text/javascript">
+    <script>
         var msg = '';
 
         // START Display day message
@@ -374,14 +428,25 @@
                 }
             case 'Friday':
                 {
-                    msg = 'Have a great weekend.';
+                    msg = 'Have a great weekend! 🙌';
+                    break;
+                }
+            case 'Saturday':
+                {
+                    msg = 'Have a great Saturday!';
+                    break;
+                }
+            case 'Sunday':
+                {
+                    msg = 'Enjoy that Sunday brunch!';
                     break;
                 }
         }
 
         document.getElementById('whatDay').innerHTML = msg;
-
+// END Display day message
     </script>
+
 
     <!-- Start Service Worker -->
 

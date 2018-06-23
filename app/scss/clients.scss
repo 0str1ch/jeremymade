@@ -7,6 +7,7 @@
   color: #fff;
   letter-spacing: -0.01em;
   line-height: 1.2;
+  font-size: 3em;
 }
 
 
@@ -14,7 +15,8 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-.clientList a {
+.clientList a,
+.clientList span {
     color: #fff;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -22,7 +24,8 @@
     transition: all 0.5s ease;
 }
 
-.clientList a:hover {
+.clientList a:hover,
+.clientList span:hover {
   color: #fff;
 }
 
@@ -51,8 +54,20 @@
   background-repeat: no-repeat;
 }
 
-.background-divs.green {
-  background-color: green;
+.background-divs.nk {
+  background-color: rgba(0, 0, 0, 0.41);
+  background-image: url(../images/nickyk.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-divs.sss {
+  background-color: rgba(0, 0, 0, 0.41);
+  background-image: url(../images/sss.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .background-divs.yellow {

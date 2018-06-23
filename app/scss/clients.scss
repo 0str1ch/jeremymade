@@ -81,17 +81,17 @@
   background-blend-mode: multiply;
 }*/
 
-.background-divs.nk {
+/*.background-divs.nk {
   background-color: rgba(0, 0, 0, 0.71);
   background-blend-mode: multiply;
-}
+}*/
 
 .background-divs.nk {
   @include retina(
     "https://cdn.jeremymade.com/images/nk.jpg",
     3,
     cover,
-    center center no-repeat
+    center center no-repeat rgba(0, 0, 0, 0.71) multiply
   );
 }
 

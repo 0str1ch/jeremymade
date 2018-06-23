@@ -66,17 +66,16 @@
 }
 
 .background-divs.ghr {
+  background-color: rgba(0, 0, 0, 0.41);
   @include retina('https://cdn.jeremymade.com/images/da-band.jpg', 3, cover, center center no-repeat);
+  background-blend-mode: multiply;
 }
 
-.background-divs.ghr {
+/*.background-divs.ghr {
   background-color: rgba(0, 0, 0, 0.41);
-  /*background-image: url(https://cdn.jeremymade.com/images/da-band.jpg);*/
+  background-image: url(https://cdn.jeremymade.com/images/da-band.jpg);
   background-blend-mode: multiply;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
+}*/
 
 .background-divs.nk {
   background-color: rgba(0, 0, 0, 0.41);

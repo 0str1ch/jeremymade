@@ -58,6 +58,7 @@
   right: 0;
   left: 0;
   visibility: visible;
+  transform: translate3d(0, 0, 0);
   -webkit-transition: opacity 0.5s ease;
   -moz-transition: opacity 0.5s ease;
   -o-transition: opacity 0.5s ease;
@@ -106,6 +107,7 @@
 }
 
 .active {
+  transform: translate3d(0, 0, 0);
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.5s ease-in-out;

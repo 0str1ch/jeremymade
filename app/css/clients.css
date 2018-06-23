@@ -61,6 +61,8 @@
   right: 0;
   left: 0;
   visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease; }
 
@@ -206,6 +208,8 @@
       background-size: cover; } }
 
 .active {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.5s ease-in-out;

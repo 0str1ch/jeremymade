@@ -64,14 +64,10 @@
   transition: opacity 0.5s ease;
 }
 
-.background-divs.ghr {
-  background-color: rgba(0, 0, 0, 0.71);
-  @include retina(
-    "https://cdn.jeremymade.com/images/da-band.jpg",
-    3,
-    cover,
-    center center no-repeat
-  );
+.background-divs.nk,
+.background-divs.ghr,
+.background-divs.sss {
+  background-color: rgba(0, 0, 0, 0.71) !important;
   background-blend-mode: multiply;
 }
 
@@ -81,8 +77,14 @@
   background-blend-mode: multiply;
 }*/
 
-.background-divs.nk {
-  background-color: rgba(0, 0, 0, 0.71) !important;
+.background-divs.ghr {
+  background-color: rgba(0, 0, 0, 0.71);
+  @include retina(
+    "https://cdn.jeremymade.com/images/da-band.jpg",
+    3,
+    cover,
+    center center no-repeat
+  );
   background-blend-mode: multiply;
 }
 
@@ -96,18 +98,12 @@
 }
 
 .background-divs.sss {
-  background-color: rgba(0, 0, 0, 0.71);
   @include retina(
     "https://cdn.jeremymade.com/images/sss.jpg",
     3,
     cover,
     center center no-repeat
   );
-  background-blend-mode: multiply;
-}
-
-.background-divs.yellow {
-  background-color: yellow;
 }
 
 .active {

@@ -64,6 +64,17 @@
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease; }
 
+.background-divs.nk,
+.background-divs.ghr,
+.background-divs.sss {
+  background-color: rgba(0, 0, 0, 0.71) !important;
+  background-blend-mode: multiply; }
+
+/*.background-divs.ghr {
+  background-color: rgba(0, 0, 0, 0.41);
+  background-image: url(https://cdn.jeremymade.com/images/da-band.jpg);
+  background-blend-mode: multiply;
+}*/
 .background-divs.ghr {
   background-color: rgba(0, 0, 0, 0.71);
   /*
@@ -109,15 +120,6 @@
       background: url("https://cdn.jeremymade.com/images/da-band@3x.jpg") center center no-repeat;
       background-size: cover; } }
 
-/*.background-divs.ghr {
-  background-color: rgba(0, 0, 0, 0.41);
-  background-image: url(https://cdn.jeremymade.com/images/da-band.jpg);
-  background-blend-mode: multiply;
-}*/
-.background-divs.nk {
-  background-color: rgba(0, 0, 0, 0.71) !important;
-  background-blend-mode: multiply; }
-
 .background-divs.nk {
   /*
      * Set a counter and get the length of the image path.
@@ -162,7 +164,6 @@
       background-size: cover; } }
 
 .background-divs.sss {
-  background-color: rgba(0, 0, 0, 0.71);
   /*
      * Set a counter and get the length of the image path.
      */
@@ -191,8 +192,7 @@
   /*
      * If anything went wrong trying to separate the file from its
      * extension, set a background value without doing anything to it.
-     */
-  background-blend-mode: multiply; }
+     */ }
   @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
     .background-divs.sss {
       background: url("https://cdn.jeremymade.com/images/sss@2x.jpg") center center no-repeat;
@@ -205,9 +205,6 @@
     .background-divs.sss {
       background: url("https://cdn.jeremymade.com/images/sss@3x.jpg") center center no-repeat;
       background-size: cover; } }
-
-.background-divs.yellow {
-  background-color: yellow; }
 
 .active {
   opacity: 1;

@@ -115,6 +115,10 @@
   background-blend-mode: multiply;
 }*/
 .background-divs.nk {
+  background-color: rgba(0, 0, 0, 0.71);
+  background-blend-mode: multiply; }
+
+.background-divs.nk {
   /*
      * Set a counter and get the length of the image path.
      */
@@ -156,10 +160,6 @@
     .background-divs.nk {
       background: url("https://cdn.jeremymade.com/images/nk@3x.jpg") center center no-repeat;
       background-size: cover; } }
-
-.background-divs.nk {
-  background-color: rgba(0, 0, 0, 0.71);
-  background-blend-mode: multiply; }
 
 .background-divs.sss {
   background-color: rgba(0, 0, 0, 0.71);

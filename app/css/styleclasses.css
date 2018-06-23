@@ -1,6 +1,9 @@
 /*
 * === Style Classes ===
 */
+.absolute {
+  position: absolute; }
+
 .white {
   color: #fff; }
 

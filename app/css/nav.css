@@ -2,6 +2,8 @@
 * === Headroom.js ===
 */
 .headroom {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   will-change: transform;
   -webkit-transition: -webkit-transform 200ms linear;
   transition: -webkit-transform 200ms linear;
@@ -11,10 +13,14 @@
           transition-delay: 0.2s; }
 
 .headroom--pinned {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transform: translateY(0%);
           transform: translateY(0%); }
 
 .headroom--unpinned {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%); }
 

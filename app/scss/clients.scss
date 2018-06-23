@@ -12,18 +12,17 @@
   font-size: 3em;
 }
 
-
 .clientList:hover > a {
-    color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .clientList a,
 .clientList span {
-    color: #fff;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .clientList a:hover,
@@ -67,7 +66,12 @@
 
 .background-divs.ghr {
   background-color: rgba(0, 0, 0, 0.71);
-  @include retina('https://cdn.jeremymade.com/images/da-band.jpg', 3, cover, center center no-repeat);
+  @include retina(
+    "https://cdn.jeremymade.com/images/da-band.jpg",
+    3,
+    cover,
+    center center no-repeat
+  );
   background-blend-mode: multiply;
 }
 
@@ -78,14 +82,27 @@
 }*/
 
 .background-divs.nk {
+  @include retina(
+    "https://cdn.jeremymade.com/images/nk.jpg",
+    3,
+    cover,
+    center center no-repeat
+  );
+}
+
+.background-divs.nk {
   background-color: rgba(0, 0, 0, 0.71);
-  @include retina('https://cdn.jeremymade.com/images/nk.jpg', 3, cover, center center no-repeat);
   background-blend-mode: multiply;
 }
 
 .background-divs.sss {
   background-color: rgba(0, 0, 0, 0.71);
-  @include retina('https://cdn.jeremymade.com/images/sss.jpg', 3, cover, center center no-repeat);
+  @include retina(
+    "https://cdn.jeremymade.com/images/sss.jpg",
+    3,
+    cover,
+    center center no-repeat
+  );
   background-blend-mode: multiply;
 }
 

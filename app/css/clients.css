@@ -115,7 +115,6 @@
   background-blend-mode: multiply;
 }*/
 .background-divs.nk {
-  background-color: rgba(0, 0, 0, 0.71);
   /*
      * Set a counter and get the length of the image path.
      */
@@ -144,8 +143,7 @@
   /*
      * If anything went wrong trying to separate the file from its
      * extension, set a background value without doing anything to it.
-     */
-  background-blend-mode: multiply; }
+     */ }
   @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
     .background-divs.nk {
       background: url("https://cdn.jeremymade.com/images/nk@2x.jpg") center center no-repeat;
@@ -158,6 +156,10 @@
     .background-divs.nk {
       background: url("https://cdn.jeremymade.com/images/nk@3x.jpg") center center no-repeat;
       background-size: cover; } }
+
+.background-divs.nk {
+  background-color: rgba(0, 0, 0, 0.71);
+  background-blend-mode: multiply; }
 
 .background-divs.sss {
   background-color: rgba(0, 0, 0, 0.71);

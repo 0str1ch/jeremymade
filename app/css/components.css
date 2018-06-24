@@ -264,10 +264,6 @@ main .mainContent {
   /*margin-top: -10%;*/
   position: relative; }
 
-.heroTitle {
-  font-size: 6em;
-  color: #fff; }
-
 .introTitle h2 {
   color: var(--introTitle); }
 

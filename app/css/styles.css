@@ -50,11 +50,11 @@ html {
 */
 @media screen and (min-width: 50em) {
   html {
-    font-size: 2vw; } }
+    font-size: 1.125em; } }
 
 @media screen and (min-width: 75em) {
   html {
-    font-size: 3vw; } }
+    font-size: 1.5em; } }
 
 html {
   font-family: NeueHaasText, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
